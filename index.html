@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NWC204 - Ôn Tập Trắc Nghiệm Mạng Máy Tính (CCNA 1 - ITN)</title>
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+</head>
+<body class="dark-theme">
+    <!-- Main App Container -->
+    <div id="app" class="app-container">
+
+        <!-- Top Navigation Bar -->
+        <header class="app-header">
+            <div class="header-left">
+                <div class="brand-logo" id="brandHome" title="Về trang chủ đề thi">
+                    <div class="logo-icon">🌐</div>
+                    <div class="logo-text">
+                        <span class="logo-title">NWC204</span>
+                        <span class="logo-subtitle">Computer Networking (CCNA 1)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-center" id="headerExamTitleWrap" style="display: none;">
+                <span class="active-exam-badge" id="navExamBadge">ĐỀ 1</span>
+                <span class="active-exam-name" id="navExamTitle">SU26 - Đề 2</span>
+            </div>
+
+            <div class="header-right">
+                <button class="header-btn" id="btnHeaderStats" title="Xem thống kê tổng quan">
+                    <span class="btn-icon">📊</span>
+                    <span class="btn-text">Thống kê</span>
+                </button>
+                <button class="header-btn" id="btnResetAll" title="Xóa toàn bộ kết quả làm bài">
+                    <span class="btn-icon">🗑️</span>
+                    <span class="btn-text">Đặt lại</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- VIEW 1: DASHBOARD (Trang chủ chọn đề) -->
+        <main id="dashboardView" class="view-section active">
+            <!-- Hero Banner -->
+            <section class="hero-banner">
+                <div class="hero-content">
+                    <div class="hero-badge">⚡ HỆ THỐNG ÔN TẬP CHUẨN CCNA ITN v7.0</div>
+                    <h1 class="hero-heading">Ôn Luyện Trắc Nghiệm Môn NWC204</h1>
+                    <p class="hero-subtext">
+                        Tổng hợp <strong>5 bộ đề thi chính thức</strong> (SU26, SP26, FA25) cùng <strong>Đề tổng hợp 249 câu hỏi</strong>.
+                        Tích hợp đáp án chuẩn Cisco, giải thích chi tiết, chế độ tráo câu hỏi và hỗ trợ câu chọn nhiều đáp án.
+                    </p>
+                </div>
+
+                <!-- Global Stats Cards -->
+                <div class="global-stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: rgba(0, 240, 255, 0.15); color: #00f0ff;">📚</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="statTotalDone">0 / 249</span>
+                            <span class="stat-label">Câu đã hoàn thành</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">🎯</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="statAccuracy">0%</span>
+                            <span class="stat-label">Tỉ lệ chính xác</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: rgba(239, 68, 68, 0.15); color: #ef4444;">❌</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="statTotalWrong">0</span>
+                            <span class="stat-label">Câu cần ôn lại</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">⭐</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="statTotalSaved">0</span>
+                            <span class="stat-label">Câu đã đánh dấu</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Exam Sets Grid -->
+            <section class="exams-section">
+                <div class="section-header">
+                    <h2 class="section-title">Danh Sách Bộ Đề Ôn Luyện</h2>
+                    <span class="section-desc">Chọn một đề thi để bắt đầu làm bài trắc nghiệm ngay</span>
+                </div>
+
+                <div class="exams-grid" id="examCardsContainer">
+                    <!-- Dynamic Exam Cards Injected via JS -->
+                </div>
+            </section>
+        </main>
+
+        <!-- VIEW 2: PRACTICE / EXAM VIEW (Luyện tập làm bài) -->
+        <main id="practiceView" class="view-section" style="display: none;">
+            
+            <!-- Practice Sub-header / Action Toolbar -->
+            <div class="practice-toolbar">
+                <div class="toolbar-left">
+                    <button class="action-btn btn-back" id="btnBackToHome">
+                        <span>←</span>
+                        <span>Danh sách đề</span>
+                    </button>
+                    <div class="current-exam-meta">
+                        <h2 class="exam-title-badge" id="examCurrentTitle">Đề 1: SU26 - Đề 2</h2>
+                        <span class="exam-progress-counter" id="examProgressCount">Câu 1 / 49</span>
+                    </div>
+                </div>
+
+                <!-- Center Controls: Shuffle & Filters -->
+                <div class="toolbar-center">
+                    <!-- Shuffle Button & Status -->
+                    <div class="shuffle-control-group">
+                        <button class="action-btn btn-shuffle" id="btnShuffle" title="Tráo đổi ngẫu nhiên thứ tự các câu hỏi">
+                            <span class="btn-icon">🔀</span>
+                            <span>Tráo câu hỏi</span>
+                        </button>
+                        <button class="action-btn btn-restore" id="btnRestoreOrder" title="Khôi phục về thứ tự gốc 1 -> N" style="display: none;">
+                            <span class="btn-icon">↺</span>
+                            <span>Thứ tự gốc</span>
+                        </button>
+                        <span class="shuffle-badge" id="shuffleStatusBadge">Thứ tự chuẩn</span>
+                    </div>
+
+                    <!-- Filter Mode Pills -->
+                    <div class="filter-pills-group">
+                        <button class="filter-pill active" data-filter="all">Tất cả (<span id="countAll">0</span>)</button>
+                        <button class="filter-pill" data-filter="unanswered">Chưa làm (<span id="countUnanswered">0</span>)</button>
+                        <button class="filter-pill" data-filter="wrong">Làm sai (<span id="countWrong">0</span>)</button>
+                        <button class="filter-pill" data-filter="saved">Đã lưu ⭐ (<span id="countSaved">0</span>)</button>
+                    </div>
+                </div>
+
+                <div class="toolbar-right">
+                    <button class="action-btn btn-matrix-mobile" id="btnToggleMobileMatrix">
+                        <span>📋</span>
+                        <span>Ma trận câu hỏi</span>
+                    </button>
+                    <button class="action-btn btn-reset-exam" id="btnResetCurrentExam" title="Làm lại đề này từ đầu">
+                        <span>🔄</span>
+                        <span>Làm lại đề</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Practice Workspace Layout: Sidebar + Main Content -->
+            <div class="practice-layout">
+                
+                <!-- Left Sidebar: Question Matrix -->
+                <aside class="matrix-sidebar" id="matrixSidebar">
+                    <div class="sidebar-header">
+                        <span class="sidebar-title">Ma trận câu hỏi</span>
+                        <span class="sidebar-stat" id="sidebarProgressText">0 / 0</span>
+                    </div>
+                    <div class="matrix-grid-container">
+                        <div class="matrix-grid" id="questionMatrix">
+                            <!-- Matrix items 1..N dynamically generated -->
+                        </div>
+                    </div>
+                    <div class="matrix-legend">
+                        <div class="legend-item"><span class="legend-dot unanswered"></span> Chưa làm</div>
+                        <div class="legend-item"><span class="legend-dot correct"></span> Đúng</div>
+                        <div class="legend-item"><span class="legend-dot wrong"></span> Sai</div>
+                        <div class="legend-item"><span class="legend-dot saved"></span> Đã lưu ⭐</div>
+                    </div>
+                </aside>
+
+                <!-- Center Main Content: Question Card -->
+                <div class="question-main-area">
+                    <div class="question-card" id="questionCard">
+                        
+                        <!-- Question Card Header -->
+                        <div class="q-header">
+                            <div class="q-header-left">
+                                <span class="q-number-pill" id="qNumberPill">CÂU 1</span>
+                                <span class="q-category-pill" id="qCategoryPill">Transport Layer (TCP/UDP)</span>
+                                <span class="q-type-pill" id="qTypePill">⚡ Chọn 1 đáp án</span>
+                            </div>
+                            <div class="q-header-right">
+                                <button class="btn-bookmark" id="btnBookmark" title="Đánh dấu lưu câu hỏi này">
+                                    <span class="star-icon">⭐</span>
+                                    <span class="bookmark-label">Lưu câu này</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Question Text Content -->
+                        <div class="q-content-box">
+                            <div class="q-text" id="questionText">
+                                <!-- Question text injected here -->
+                            </div>
+                        </div>
+
+                        <!-- Multi-choice Instruction Hint if applicable -->
+                        <div class="multi-choice-alert" id="multiChoiceNotice" style="display: none;">
+                            <span class="alert-icon">💡</span>
+                            <span class="alert-text" id="multiChoiceNoticeText">Câu hỏi này yêu cầu chọn 2 đáp án đúng. Hãy tích chọn các phương án và bấm "Xác nhận đáp án".</span>
+                        </div>
+
+                        <!-- Options List -->
+                        <div class="options-container" id="optionsContainer">
+                            <!-- Options A, B, C, D... injected here -->
+                        </div>
+
+                        <!-- Multi-choice Submit Action Button -->
+                        <div class="multi-submit-wrapper" id="multiSubmitWrapper" style="display: none;">
+                            <button class="btn-confirm-multi" id="btnConfirmMulti" disabled>
+                                <span>Xác nhận chọn (<span id="selectedCountText">0</span>/<span id="requiredCountText">2</span>)</span>
+                            </button>
+                        </div>
+
+                        <!-- Explanation Box (Appears after answering) -->
+                        <div class="explanation-card" id="explanationCard" style="display: none;">
+                            <div class="exp-header">
+                                <span class="exp-icon">💡</span>
+                                <span class="exp-title">Giải thích & Kiến thức cốt lõi (Cisco CCNA):</span>
+                            </div>
+                            <div class="exp-body" id="explanationText">
+                                <!-- Explanation text -->
+                            </div>
+                        </div>
+
+                        <!-- Question Card Footer Navigation -->
+                        <div class="q-footer-nav">
+                            <button class="nav-btn btn-prev" id="btnPrevQ">
+                                <span>◀</span>
+                                <span>Câu trước</span>
+                            </button>
+                            <div class="keyboard-hint">
+                                <span>Phím tắt:</span> <code>←</code> <code>→</code> chuyển câu | <code>1</code> <code>2</code> <code>3</code> <code>4</code> chọn A B C D
+                            </div>
+                            <button class="nav-btn btn-next" id="btnNextQ">
+                                <span>Câu tiếp theo</span>
+                                <span>▶</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Sidebar / Flank: Overview Summary & Tips -->
+                <aside class="right-summary-sidebar">
+                    <div class="summary-box">
+                        <h3 class="box-title">Tiến Độ Hiện Tại</h3>
+                        <div class="circle-progress-wrapper">
+                            <div class="progress-bar-linear">
+                                <div class="progress-fill" id="examLinearProgress" style="width: 0%;"></div>
+                            </div>
+                            <div class="progress-percent-text" id="examPercentText">0%</div>
+                        </div>
+                        <div class="summary-metrics">
+                            <div class="metric-row">
+                                <span>Đã trả lời:</span>
+                                <strong id="metricAnswered">0 / 0</strong>
+                            </div>
+                            <div class="metric-row text-success">
+                                <span>Số câu đúng:</span>
+                                <strong id="metricCorrect">0</strong>
+                            </div>
+                            <div class="metric-row text-danger">
+                                <span>Số câu sai:</span>
+                                <strong id="metricWrong">0</strong>
+                            </div>
+                            <div class="metric-row text-warning">
+                                <span>Đã lưu ⭐:</span>
+                                <strong id="metricSaved">0</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-tips-box">
+                        <h4 class="tips-title">💡 Mẹo Ôn Thi NWC204</h4>
+                        <ul class="tips-list">
+                            <li><strong>TCP vs UDP:</strong> TCP tin cậy (3-way handshake, window, sequencing); UDP phi kết nối, overhead thấp (8 bytes).</li>
+                            <li><strong>IPv6 Rules:</strong> 128-bit hex; dấu <code>::</code> chỉ được dùng 1 lần duy nhất để nén chuỗi số 0 liên tiếp.</li>
+                            <li><strong>Subnetting:</strong> /24=254 hosts, /26=62 hosts, /27=30 hosts, /30=2 hosts (point-to-point link).</li>
+                            <li><strong>Cisco Modes:</strong> <code>></code> (User EXEC) → <code>#</code> (Privileged EXEC) → <code>(config)#</code> (Global config).</li>
+                        </ul>
+                    </div>
+                </aside>
+
+            </div>
+
+        </main>
+
+        <!-- Mobile Question Matrix Drawer Modal -->
+        <div class="mobile-matrix-modal" id="mobileMatrixModal" style="display: none;">
+            <div class="mobile-matrix-backdrop" id="mobileMatrixBackdrop"></div>
+            <div class="mobile-matrix-content">
+                <div class="modal-header">
+                    <h3>Danh sách câu hỏi</h3>
+                    <button class="btn-close-modal" id="btnCloseMobileMatrix">✕</button>
+                </div>
+                <div class="matrix-grid" id="questionMatrixMobile">
+                    <!-- Mobile matrix clones -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notification Notification -->
+        <div class="toast-notification" id="toastNotification" style="display: none;">
+            <span class="toast-message" id="toastMessage">Thông báo</span>
+        </div>
+
+    </div>
+
+    <!-- Scripts: Dataset first, then Core Logic -->
+    <script src="questions_data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
