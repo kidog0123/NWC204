@@ -1,9 +1,6064 @@
 ﻿/**
  * NWC204 - Computer Networking (CCNA 1 - ITN) Review Dataset
- * Full 5 Exams + Comprehensive 249-Question Pool
- * Includes verified Cisco ITN answer keys, multi-select support, and detailed explanations.
+ * 1. Featured: Bộ 150 Câu Trọng Tâm FE (Flashcard & Trắc Nghiệm)
+ * 2-6. 5 Bộ đề thi chính thức (SU26, SP26, FA25)
+ * 7. Đề Tổng Hợp 249 Câu
+ * Verified Cisco ITN answer keys, multi-select support, and detailed explanations.
  */
 const NWC204_EXAMS = [
+    {
+        "id":  "exam_fe150",
+        "title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+        "shortTitle":  "150 Câu Trọng Tâm FE",
+        "code":  "FE_150",
+        "is_featured":  true,
+        "total_questions":  150,
+        "questions":  [
+                          {
+                              "id":  "nwc_fe150_q1",
+                              "global_id":  1,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  1,
+                              "question":  "Within a production network, what is the purpose of configuring a switch with a default gateway address?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Hosts that are connected to the switch can use the switch default gateway address to forward packets to a remote destination",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "A switch must have a default gateway to be accessible by Telnet and SSH.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "The default gateway address is used to forward packets originating from the switch to remote networks.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "It provides a next-hop address for all traffic that flows through the switch.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Địa chỉ default gateway cấu hình trên Switch được dùng để gửi các gói tin do chính Switch tạo ra (như phản hồi Telnet, SSH, Syslog, SNMP) tới các thiết bị nằm ngoài mạng cục bộ của Switch."
+                          },
+                          {
+                              "id":  "nwc_fe150_q2",
+                              "global_id":  2,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  2,
+                              "question":  "NWC204_SU26_FE | Multiple Choice Question 10 (Choose 1 answer)Match the command with the device mode at which the command is entered. (Not all options are used.)Commands: A. login | B. service password-encryption | C. ip address 192.168.4.4 255.255.255.0 | D. copy running-config startup-config | E. enableModes: 1. R1(config)# | 2. R1\u003e | 3. R1(config-router)# | 4. R1# | 5. R1(config-line)# | 6. R1(config-if)#",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "A5-B1-C6-D2-E4",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "A5-B1-C6-D4-E2",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "A1-B5-C6-D4-E2",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "A5-B1-C4-D6-E2",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Cisco IOS CLI \u0026 Configuration",
+                              "explanation":  "enable nhập ở chế độ User EXEC (R1\u003e). copy running-config startup-config nhập ở chế độ Privileged EXEC (R1#). service password-encryption nhập ở chế độ Global Config (R1(config)#). login nhập ở chế độ Line Config (R1(config-line)#). ip address ... nhập ở chế độ Interface Config (R1(config-if)#)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q3",
+                              "global_id":  3,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  3,
+                              "question":  "How many host addresses are available on the network 172.16.128.0 with a subnet mask of 255.255.252.0?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "510",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "512",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "1022",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "1024",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "2046",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "F",
+                                                  "content":  "2048",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv4 Subnetting",
+                              "explanation":  "Subnet mask 255.255.252.0 (/22) để lại 10 bit cho host. Số IP cấp được cho Host = 2^10 - 2 = 1024 - 2 = 1022."
+                          },
+                          {
+                              "id":  "nwc_fe150_q4",
+                              "global_id":  4,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  4,
+                              "question":  "What is the purpose of subnetting a network?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To increase the number of available host addresses in a network.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To create a single, large broadcast domain.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To reduce the size of the network into smaller broadcast domains.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To simplify the IP addressing scheme.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv4 Subnetting",
+                              "explanation":  "Chia mạng con (Subnetting) là kỹ thuật chia một mạng lớn thành nhiều mạng nhỏ hơn nhằm giảm kích thước của miền quảng bá (Broadcast Domain), giúp giảm lưu lượng rác, tối ưu băng thông và nâng cao bảo mật."
+                          },
+                          {
+                              "id":  "nwc_fe150_q5",
+                              "global_id":  5,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  5,
+                              "question":  "What statement describes the function of the Address Resolution Protocol?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "ARP is used to discover the IP address of any host on a different network.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "ARP is used to discover the IP address of any host on the local network.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "ARP is used to discover the MAC address of any host on a different network.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "ARP is used to discover the MAC address of any host on the local network.",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "D",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Address Resolution (ARP \u0026 ND)",
+                              "explanation":  "Chức năng chính của giao thức ARP là tìm kiếm địa chỉ vật lý (MAC address) của một thiết bị đích nằm trong cùng một mạng nội bộ (local network) dựa trên địa chỉ IPv4 đã biết."
+                          },
+                          {
+                              "id":  "nwc_fe150_q6",
+                              "global_id":  6,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  6,
+                              "question":  "Which statement describes the treatment of ARP requests on the local link?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "They must be forwarded by all routers on the local network.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "They are received and processed by every device on the local network.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "They are dropped by all switches on the local network.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "They are received and processed only by the target device.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Address Resolution (ARP \u0026 ND)",
+                              "explanation":  "ARP Request là một bản tin Broadcast, do đó tất cả các thiết bị trong cùng mạng nội bộ (local link) đều sẽ nhận và xử lý nó."
+                          },
+                          {
+                              "id":  "nwc_fe150_q7",
+                              "global_id":  7,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  7,
+                              "question":  "What is the effect of using the Router# copy running-config startup-config command on a router?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "The contents of ROM will change.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "The contents of RAM will change.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "The contents of NVRAM will change.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "The contents of flash will change.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Cisco IOS CLI \u0026 Configuration",
+                              "explanation":  "Lệnh này sao chép cấu hình đang chạy trong bộ nhớ RAM vào tập tin cấu hình khởi động lưu trong bộ nhớ NVRAM (không bị mất dữ liệu khi mất điện)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q8",
+                              "global_id":  8,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  8,
+                              "question":  "How many usable IP addresses are available on the 192.168.1.0/27 network?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "254",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "30",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "256",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "16",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "62",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "F",
+                                                  "content":  "32",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv4 Subnetting",
+                              "explanation":  "Subnet /27 mượn 3 bit, còn lại 5 bit cho Host. Số IP khả dụng = 2^5 - 2 = 32 - 2 = 30 host."
+                          },
+                          {
+                              "id":  "nwc_fe150_q9",
+                              "global_id":  9,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  9,
+                              "question":  "Which IOS mode allows access to all commands and features?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Global configuration mode",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Interface subconfiguration mode",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Line console subconfiguration mode",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Privileged EXEC mode",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "User EXEC mode",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "D",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Chế độ Privileged EXEC mode (nhận diện bằng dấu #) cho phép truy cập toàn bộ các câu lệnh kiểm tra, giám sát, quản lý file hệ thống và là cửa ngõ bắt buộc để vào các chế độ cấu hình sâu hơn."
+                          },
+                          {
+                              "id":  "nwc_fe150_q10",
+                              "global_id":  10,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  10,
+                              "question":  "Which frame forwarding method receives the entire frame and performs a CRC check to detect errors before forwarding the frame?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Cut-through switching",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Store-and-forward switching",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Fragment-free switching",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Fast-forward switching",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Chế độ Store-and-forward nhận toàn bộ khung dữ liệu, kiểm tra lỗi CRC ở phần FCS trước khi quyết định chuyển tiếp hay loại bỏ khung."
+                          },
+                          {
+                              "id":  "nwc_fe150_q11",
+                              "global_id":  11,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  11,
+                              "question":  "NWC204_SP26_RE | Multiple Choice Question 2 (Choose 1 answer)Refer to the exhibit. Match the packets with their destination IP address to the exiting interfaces on the router.Routing Table:- C 10.1.0.0/24 is directly connected, Serial0/0/0- O 172.17.6.0/24 [110/2] via 192.168.3.4, FastEthernet0/0- O 172.17.10.0/24 [110/2] via 192.168.5.2, FastEthernet1/1- O 172.17.12.0/24 [110/2] via 192.168.4.2, FastEthernet1/0- C 172.17.14.0/24 is directly connected, FastEthernet0/1- S* 0.0.0.0/0 is directly connected, Serial0/0/0Targets: A. 172.17.10.5 | B. 172.17.12.10 | C. 172.17.14.8 | D. 172.17.8.20 | E. 172.17.6.15Interfaces: 1. FastEthernet0/0 | 2. FastEthernet0/1 | 3. FastEthernet1/0 | 4. FastEthernet1/1 | 5. Serial0/0/0 | 6. The packet is dropped.",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "1E-2C-3A-4B-5D",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "1E-2C-3B-4A-5D",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "1E-2B-3C-4A-5D",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "1E-2C-3B-4D-5A",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv4 Subnetting",
+                              "explanation":  "172.17.6.15 (E) qua FastEthernet0/0 (1) -\u003e 1E; 172.17.14.8 (C) qua FastEthernet0/1 (2) -\u003e 2C; 172.17.12.10 (B) qua FastEthernet1/0 (3) -\u003e 3B; 172.17.10.5 (A) qua FastEthernet1/1 (4) -\u003e 4A; 172.17.8.20 (D) dùng Default Route qua Serial0/0/0 (5) -\u003e 5D."
+                          },
+                          {
+                              "id":  "nwc_fe150_q12",
+                              "global_id":  12,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  12,
+                              "question":  "What is the main role of the physical layer?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Error checking",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Transporting bits across the medium",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Routing packets",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Formatting messages",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Physical Layer \u0026 Media",
+                              "explanation":  "Vai trò cốt lõi của tầng Vật lý (Physical Layer) là mã hóa và truyền tải các bit nhị phân (0 và 1) qua môi trường truyền dẫn vật lý."
+                          },
+                          {
+                              "id":  "nwc_fe150_q13",
+                              "global_id":  13,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  13,
+                              "question":  "Which command is used to secure privileged EXEC mode on a switch?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "password",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "enable secret",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "login",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "service password-encryption",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Lệnh enable secret được dùng để cài mật khẩu bảo mật (được mã hóa) khi truy cập vào chế độ Privileged EXEC."
+                          },
+                          {
+                              "id":  "nwc_fe150_q14",
+                              "global_id":  14,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  14,
+                              "question":  "A network administrator is measuring the transfer of bits across the company backbone for a mission critical financial application. The administrator notices that the network throughput appears lower than the bandwidth expected. Which three factors could influence the differences in throughput? (Choose three.)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "the amount of traffic that is currently crossing the network",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "the sophistication of the encapsulation method applied to the data",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "the type of traffic that is crossing the network",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "the latency that is created by the number of network devices that the data is crossing",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "the bandwidth of the WAN connection to the Internet",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "F",
+                                                  "content":  "the reliability of the gigabit Ethernet infrastructure of the backbone",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "C",
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "A, C, D",
+                              "is_multiple":  true,
+                              "required_count":  3,
+                              "category":  "Physical Layer \u0026 Media",
+                              "explanation":  "Thông lượng thực tế (Throughput) thường thấp hơn Bandwidth do bị ảnh hưởng bởi: lưu lượng đang đi qua mạng (A), loại lưu lượng/giao thức (C), và độ trễ sinh ra khi đi qua nhiều thiết bị trung gian (D)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q15",
+                              "global_id":  15,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  15,
+                              "question":  "How can you view the ARP table on a Windows PC?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "arp -a",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "show arp",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "netstat -r",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "ipconfig /all",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Trên hệ điều hành Windows, lệnh arp -a được sử dụng trong Command Prompt để xem bảng ARP Cache."
+                          },
+                          {
+                              "id":  "nwc_fe150_q16",
+                              "global_id":  16,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  16,
+                              "question":  "A university\u0027s wireless network experiences frequent collisions due to multiple devices accessing the shared medium. The network administrator is analyzing contention-based access methods to improve performance. Which of the following are features of the CSMA/CA method used in the university\u0027s 802.11 WLAN?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Devices include a duration field to reserve the medium",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Devices transmit a frame only when the medium is idle",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Devices wait a random period after detecting a collision",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Devices operate in full-duplex mode to avoid collisions",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "A, B",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Mạng Wi-Fi (802.11) dùng CSMA/CA. Thiết bị gửi kèm một trường thời gian (Duration) để giữ chỗ đường truyền (NAV) và chỉ gửi dữ liệu khi thấy kênh truyền đang rảnh (Idle)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q17",
+                              "global_id":  17,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  17,
+                              "question":  "Which of these addresses is the shortest abbreviation for the IP address: 3FFE:1044:0000:0000:00AB:0000:0000:0057?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "3FFE:1044::AB::57",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "3FFE:1044::00AB::0057",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "3FFE:1044:0:0:AB::57",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "3FFE:1044:0:0:00AB::0057",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "3FFE:1044:0000:0000:00AB::57",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "F",
+                                                  "content":  "3FFE:1044:0000:0000:00AB::0057",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Rút gọn IPv6 bằng cách bỏ các số 0 ở đầu mỗi hextet (00AB -\u003e AB, 0057 -\u003e 57) và chỉ dùng một cụm \"::\" duy nhất để nén dải số 0 liên tiếp."
+                          },
+                          {
+                              "id":  "nwc_fe150_q18",
+                              "global_id":  18,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  18,
+                              "question":  "A user pings 127.0.0.1 and receives a response. What does this confirm?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "The IP protocol stack is operational",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "The DNS service is operational",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "The NIC is functioning correctly",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "The router is reachable",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Network Troubleshooting \u0026 ICMP",
+                              "explanation":  "Địa chỉ 127.0.0.1 là địa chỉ Loopback IPv4. Việc ping thành công xác nhận rằng tầng mạng và chồng giao thức TCP/IP trên máy cục bộ đang hoạt động bình thường."
+                          },
+                          {
+                              "id":  "nwc_fe150_q19",
+                              "global_id":  19,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  19,
+                              "question":  "Which command is commonly used to test the internal configuration of IPv4 or IPv6 on the local host?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "tracert",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "ping the loopback address",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "netstat",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "ipconfig",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Thực hiện lệnh ping đến địa chỉ loopback (127.0.0.1 với IPv4 hoặc ::1 với IPv6) dùng để kiểm tra chồng giao thức IP trên chính máy cục bộ."
+                          },
+                          {
+                              "id":  "nwc_fe150_q20",
+                              "global_id":  20,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  20,
+                              "question":  "What is the logical process used by a device to determine the network address of an IPv4 address?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "ORing",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "NORing",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "ANDing",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "XORing",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Phép toán logic được sử dụng để xác định địa chỉ mạng của một địa chỉ IP cùng với Subnet Mask là phép ANDing."
+                          },
+                          {
+                              "id":  "nwc_fe150_q21",
+                              "global_id":  21,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  21,
+                              "question":  "Which two characteristics describe the IP protocol at Layer 3? (Choose two answers)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Connectionless and best-effort",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Independent of the underlying media",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Guarantees delivery of packets",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Relies on TCP for segmentation",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "A, B",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "General Networking",
+                              "explanation":  "Giao thức IP (Layer 3) có 3 đặc tính chính: Không kết nối (Connectionless), Nỗ lực tối đa (Best-effort), và Độc lập với môi trường truyền dẫn (Media independent)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q22",
+                              "global_id":  22,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  22,
+                              "question":  "Which two models are used to describe network protocols and operations? (Select two answers)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "TCP/IP",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "OSI",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "ISO",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "HTTP",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "A, B",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "General Networking",
+                              "explanation":  "Hai mô hình tham chiếu chuẩn mực dùng để mô tả kiến trúc và giao thức mạng là mô hình OSI và mô hình TCP/IP."
+                          },
+                          {
+                              "id":  "nwc_fe150_q23",
+                              "global_id":  23,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  23,
+                              "question":  "A client packet is received by a server. The packet has a destination port number of 22. What service is the client requesting?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "SSH",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "DHCP",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "DNS",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "TFTP",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Port 22 là cổng tiêu chuẩn của dịch vụ SSH (Secure Shell) để điều khiển từ xa an toàn."
+                          },
+                          {
+                              "id":  "nwc_fe150_q24",
+                              "global_id":  24,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  24,
+                              "question":  "A network administrator enters the service password-encryption command into the configuration mode of a router. What does this command accomplish?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "This command encrypts passwords as they are transmitted across serial WAN links.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "This command prevents someone from viewing the running configuration passwords.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "This command enables a strong encryption algorithm for the enable secret password command.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "This command automatically encrypts passwords in configuration files that are currently stored in NVRAM",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "This command provides an exclusive encrypted password for external service personnel who are required to do router maintenance.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Cisco IOS CLI \u0026 Configuration",
+                              "explanation":  "Lệnh service password-encryption mã hóa tất cả các mật khẩu dạng rõ (plain-text) trong tệp cấu hình để ngăn chặn việc xem lén khi hiển thị configuration."
+                          },
+                          {
+                              "id":  "nwc_fe150_q25",
+                              "global_id":  25,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  25,
+                              "question":  "What is the primary function of the Transport layer in the OSI and TCP/IP models?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To provide reliable data transport between applications",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To define physical media connections",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To translate data for human readability",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To assign IP addresses to devices",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Tầng Transport chịu trách nhiệm thiết lập giao tiếp end-to-end, quản lý luồng dữ liệu và vận chuyển dữ liệu giữa các ứng dụng chạy trên các host khác nhau."
+                          },
+                          {
+                              "id":  "nwc_fe150_q26",
+                              "global_id":  26,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  26,
+                              "question":  "What protocol does IPv6 use for address resolution, replacing the function of ARP in IPv4?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "DHCPv6",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "ICMPv6 Neighbor Discovery (ND)",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Address Resolution Protocol version 6 (ARPv6)",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Router Solicitation (RS)",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "IPv6 không dùng Broadcast ARP mà sử dụng cơ chế Neighbor Discovery (ND) của ICMPv6."
+                          },
+                          {
+                              "id":  "nwc_fe150_q27",
+                              "global_id":  27,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  27,
+                              "question":  "Which type of fiber-optic cabling is characterized by a very small core and is used for long-distance applications?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Multimode Fiber (MMF)",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Shielded Twisted-Pair (STP)",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Single-Mode Fiber (SMF)",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Coaxial Cable",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Physical Layer \u0026 Media",
+                              "explanation":  "Cáp quang đơn mode (SMF) có lõi rất nhỏ, phát tia laser chiếu thẳng, dùng cho truyền tải khoảng cách rất xa."
+                          },
+                          {
+                              "id":  "nwc_fe150_q28",
+                              "global_id":  28,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  28,
+                              "question":  "Which command displays a summary of all interfaces on the router including their IP addresses and status?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "show interfaces",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "show ip route",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "show ip interface brief",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "show running-config",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Cisco IOS CLI \u0026 Configuration",
+                              "explanation":  "Lệnh show ip interface brief cung cấp bảng tóm tắt gồm tên giao diện, địa chỉ IP, trạng thái Layer 1 (Status) và trạng thái Layer 2 (Protocol)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q29",
+                              "global_id":  29,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  29,
+                              "question":  "A host sends an IPv6 Neighbor Solicitation (NS) to determine a MAC address. What type of address is used for this request?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Multicast Ethernet and IPv6",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Unicast IPv6",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Broadcast Ethernet",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "IPv4-mapped IPv6",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Khi gửi gói Neighbor Solicitation để tìm MAC, thiết bị gửi tới địa chỉ Solicited-node Multicast IPv6, và ở tầng 2 được ánh xạ thành địa chỉ Multicast Ethernet tương ứng."
+                          },
+                          {
+                              "id":  "nwc_fe150_q30",
+                              "global_id":  30,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  30,
+                              "question":  "Which access method would be the most appropriate in-band access to the IOS over a network connection?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Console",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Telnet/SSH",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Aux",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "In-band access là truy cập quản trị thông qua kết nối mạng IP đang hoạt động, sử dụng Telnet hoặc SSH."
+                          },
+                          {
+                              "id":  "nwc_fe150_q31",
+                              "global_id":  31,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  31,
+                              "question":  "What is the purpose of ICMP messages?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To inform routers about network topology changes",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To ensure the delivery of an IP packet",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To provide feedback of IP packet transmissions",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To monitor the process of a domain name to IP address resolution",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Network Troubleshooting \u0026 ICMP",
+                              "explanation":  "ICMP cung cấp thông tin phản hồi và báo lỗi liên quan đến quá trình truyền tải các gói tin IP trên mạng."
+                          },
+                          {
+                              "id":  "nwc_fe150_q32",
+                              "global_id":  32,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  32,
+                              "question":  "What happens when a switch receives a frame and the calculated CRC value is different than the value that is in the FCS field?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "The switch places the new CRC value in the FCS field and forwards the frame.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "The switch notifies the source of the bad frame.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "The switch drops the frame.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "The switch floods the frame to all ports except the port through which the frame arrived to notify the hosts of the error.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Nếu giá trị CRC tính toán lại không khớp với trường FCS, frame bị xác định là lỗi và Switch sẽ hủy bỏ (drop) frame đó."
+                          },
+                          {
+                              "id":  "nwc_fe150_q33",
+                              "global_id":  33,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  33,
+                              "question":  "Which command is used to save the active configuration file (running-config) to the file that is used upon startup or reboot (startup-config)?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "show running-config",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "erase startup-config",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "copy running-config startup-config",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "reload",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Cisco IOS CLI \u0026 Configuration",
+                              "explanation":  "Để lưu cấu hình đang chạy trên RAM (running-config) vào NVRAM (startup-config), dùng lệnh copy running-config startup-config."
+                          },
+                          {
+                              "id":  "nwc_fe150_q34",
+                              "global_id":  34,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  34,
+                              "question":  "Match the situation with the appropriate use of network media.",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "3A-5A-1B-6B-2C-4C",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "3A-5A-2B-4B-1C-6C",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "1A-6A-3B-5B-2C-4C",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "1A-6A-2B-4B-3C-5C",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Đáp án A tương ứng với việc lựa chọn đúng môi trường truyền dẫn (cáp đồng, cáp quang, không dây) dựa trên khoảng cách, băng thông, chống nhiễu EMI và chi phí."
+                          },
+                          {
+                              "id":  "nwc_fe150_q35",
+                              "global_id":  35,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  35,
+                              "question":  "Which is true of the IPv6 packet header?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "The Hop Limit field replaces the IPv4 Time to Live field.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "The Source and Destination IPv6 addresses change while travelling from source to destination.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "The Time to Live field replaces the DiffServ field.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "The Version field identifies the next header.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Trong tiêu đề gói tin IPv6, trường Hop Limit thay thế cho trường Time to Live (TTL) của IPv4 để ngăn gói tin lặp vô hạn."
+                          },
+                          {
+                              "id":  "nwc_fe150_q36",
+                              "global_id":  36,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  36,
+                              "question":  "What is the purpose of the no shutdown command?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To reset the switch",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To enable an interface",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To configure IP addresses",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To shut down an interface",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Cisco IOS CLI \u0026 Configuration",
+                              "explanation":  "Lệnh no shutdown được dùng để bật/kích hoạt giao diện mạng trên thiết bị Cisco."
+                          },
+                          {
+                              "id":  "nwc_fe150_q37",
+                              "global_id":  37,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  37,
+                              "question":  "A web client is receiving a response for a web page from a web server. From the client\u0027s perspective, what is the correct order of the protocol stack used to decode the received transmission?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Ethernet, IP, TCP, HTTP",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "HTTP, TCP, IP, Ethernet",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Ethernet, TCP, IP, HTTP",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "HTTP, Ethernet, IP, TCP",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Khi Client nhận dữ liệu, quá trình giải đóng gói (decapsulation) đi từ tầng thấp lên tầng cao: Ethernet -\u003e IP -\u003e TCP -\u003e HTTP."
+                          },
+                          {
+                              "id":  "nwc_fe150_q38",
+                              "global_id":  38,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  38,
+                              "question":  "Which destination address is used in an ARP request frame?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "0000.0000.0000",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "255.255.255.255",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "FFFF.FFFF.FFFF",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "AAAA.AAAA.AAAA",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "The physical address of the destination host",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Address Resolution (ARP \u0026 ND)",
+                              "explanation":  "ARP Request được gửi dưới dạng Broadcast ở tầng Data Link, do đó địa chỉ MAC đích luôn là FFFF.FFFF.FFFF."
+                          },
+                          {
+                              "id":  "nwc_fe150_q39",
+                              "global_id":  39,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  39,
+                              "question":  "Which tool uses the ICMP \"Time Exceeded\" message to trace the path between two hosts?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Ping",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Netstat",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Traceroute",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Ipconfig",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Network Troubleshooting \u0026 ICMP",
+                              "explanation":  "Tiện ích traceroute (tracert) gửi các gói tin có TTL tăng dần và dựa vào bản tin ICMP \"Time Exceeded\" trả về từ các router để xác định đường đi."
+                          },
+                          {
+                              "id":  "nwc_fe150_q40",
+                              "global_id":  40,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  40,
+                              "question":  "Which network infrastructure might an organization use to provide secure and safe access to individuals who work for a different organization but require access to the organization\u0027s data?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Extranet",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Intranet",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "LAN",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "WAN",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Extranet cho phép các đối tác, nhà cung cấp hoặc tổ chức bên ngoài được cấp quyền truy cập an toàn vào một phần dữ liệu nội bộ của doanh nghiệp."
+                          },
+                          {
+                              "id":  "nwc_fe150_q41",
+                              "global_id":  41,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  41,
+                              "question":  "What is the primary responsibility of the transport layer in the OSI model?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Routing data packets between networks",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Managing logical communications between applications on different hosts",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Defining physical media and connections",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Encrypting data before transmission",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Tầng Giao vận (Transport) chịu trách nhiệm quản lý kết nối và giao tiếp logic giữa các ứng dụng chạy trên các Host khác nhau."
+                          },
+                          {
+                              "id":  "nwc_fe150_q42",
+                              "global_id":  42,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  42,
+                              "question":  "How many host addresses are available on the 192.168.10.128/26 network?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "30",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "32",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "60",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "62",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "64",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "D",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv4 Subnetting",
+                              "explanation":  "Subnet /26 dành 32 - 26 = 6 bit cho phần Host. Số địa chỉ IP khả dụng cho host là 2^6 - 2 = 64 - 2 = 62."
+                          },
+                          {
+                              "id":  "nwc_fe150_q43",
+                              "global_id":  43,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  43,
+                              "question":  "What is a function of the tracert command that differs from the ping command when they are used on a workstation?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "The tracert command reaches the destination faster.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "The tracert command shows the information of routers in the path.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "The tracert command sends one ICMP message to each hop in the path.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "The tracert command is used to test the connectivity between two devices.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Network Troubleshooting \u0026 ICMP",
+                              "explanation":  "Khác với Ping, lệnh Tracert liệt kê thông tin IP của từng Router (hop) trên đường đi tới đích."
+                          },
+                          {
+                              "id":  "nwc_fe150_q44",
+                              "global_id":  44,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  44,
+                              "question":  "Which two statements describe the services provided by the data link layer? (Choose two.)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "It defines the end-to-end delivery addressing scheme.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "It maintains the path between the source and destination devices during the data transmission.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "It manages the access of frames to the network media.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "It provides reliable delivery through link establishment and flow control.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "It ensures that application data will be transmitted according to the prioritization.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "F",
+                                                  "content":  "It packages various Layer 3 PDUs into a frame format that is compatible with the network interface.",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C",
+                                                      "F"
+                                                  ],
+                              "correct_answer":  "C, F",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "General Networking",
+                              "explanation":  "Tầng Data Link quản lý việc truy cập môi trường truyền dẫn của các frame (C) và đóng gói các PDU Tầng 3 thành định dạng Frame tương thích với giao diện mạng (F)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q45",
+                              "global_id":  45,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  45,
+                              "question":  "Which two techniques are used to resolve MAC addresses from IP addresses on IPv4 and IPv6 networks?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "ARP",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Neighbor Discovery (ND)",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "ICMPv4",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "DHCP",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "A, B",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "IPv4 dùng ARP để phân giải IP sang MAC, còn IPv6 dùng Neighbor Discovery (ND)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q46",
+                              "global_id":  46,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  46,
+                              "question":  "What term refers to the amount of data that can be transmitted over a medium in a given time?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Bandwidth",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Latency",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Throughput",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Goodput",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Throughput (Thông lượng) là lượng dữ liệu thực tế truyền qua môi trường mạng trong một khoảng thời gian nhất định."
+                          },
+                          {
+                              "id":  "nwc_fe150_q47",
+                              "global_id":  47,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  47,
+                              "question":  "Which sublayer handles Ethernet addressing?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Application",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "MAC",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "LLC",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Network",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Tại tầng Data Link, phân lớp MAC (Media Access Control) chịu trách nhiệm định địa chỉ vật lý (MAC Address)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q48",
+                              "global_id":  48,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  48,
+                              "question":  "Which Windows command would display the protocols in use, the local address and port numbers, the foreign address and port numbers, and the connection state?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "ipconfig /all",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "ping",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "netstat",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "traceroute",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Lệnh netstat hiển thị các kết nối mạng đang hoạt động, giao thức, địa chỉ/cổng nội bộ, địa chỉ/cổng đích và trạng thái kết nối."
+                          },
+                          {
+                              "id":  "nwc_fe150_q49",
+                              "global_id":  49,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  49,
+                              "question":  "What process does a device use to verify that its IPv6 address is unique on the network?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "DHCPv6",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "SLAAC",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Neighbor Discovery Protocol (NDP)",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Duplicate Address Detection (DAD)",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "D",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Duplicate Address Detection (DAD) giúp thiết bị kiểm tra xem địa chỉ IPv6 dự định dùng có bị trùng lặp trên mạng hay không."
+                          },
+                          {
+                              "id":  "nwc_fe150_q50",
+                              "global_id":  50,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  50,
+                              "question":  "Which statement describes the use of powerline networking technology?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "New \"smart\" electrical cabling is used to extend an existing home LAN",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "A home LAN is installed without the use of physical cabling.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "A device connects to an existing home LAN using an adapter and an existing electrical outlet.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Wireless access points use powerline adapters to distribute data through the home LAN",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Powerline networking cho phép kết nối mạng LAN thông qua bộ chuyển đổi (adapter) cắm trực tiếp vào ổ cắm điện có sẵn trong nhà."
+                          },
+                          {
+                              "id":  "nwc_fe150_q51",
+                              "global_id":  51,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  51,
+                              "question":  "Which of the following is not a key element of communication?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Network speed",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "A source (sender)",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "A destination (receiver)",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "A transmission medium (channel)",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Ba yếu tố cốt lõi của truyền thông là Nguồn gửi (Source), Đích nhận (Destination) và Môi trường truyền dẫn (Medium). Tốc độ mạng không phải là phần tử cấu thành bắt buộc."
+                          },
+                          {
+                              "id":  "nwc_fe150_q52",
+                              "global_id":  52,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  52,
+                              "question":  "In network communication, what is the process of breaking up messages into smaller, more manageable units called?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Encoding",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Sequencing",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Encapsulation",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Segmenting",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "D",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Quá trình chia nhỏ thông điệp thành các đơn vị nhỏ hơn, dễ quản lý để truyền tải gọi là phân đoạn (Segmenting)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q53",
+                              "global_id":  53,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  53,
+                              "question":  "Which statement describes the half-duplex mode of data transmission?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Data that is transmitted over the network can only flow in one direction.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Data that is transmitted over the network flows in both directions at the same time.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Data that is transmitted over the network flows in one direction to many different destinations simultaneously.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Data that is transmitted over the network flows in one direction at a time.",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "D",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Physical Layer \u0026 Media",
+                              "explanation":  "Chế độ Bán song công (Half-duplex) cho phép truyền dữ liệu theo hai hướng nhưng tại một thời điểm chỉ truyền được một hướng."
+                          },
+                          {
+                              "id":  "nwc_fe150_q54",
+                              "global_id":  54,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  54,
+                              "question":  "Which OSI layer sends segments to be encapsulated in an IPv4 or IPv6 packet?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Data link layer",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Network layer",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Transport layer",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Session layer",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Tầng Transport tạo ra các Segments và chuyển xuống tầng Network để đóng gói thành Packets."
+                          },
+                          {
+                              "id":  "nwc_fe150_q55",
+                              "global_id":  55,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  55,
+                              "question":  "What is the ANDing process used for?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To securely encrypt communication between multiple network endpoints",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To find host addresses",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To determine the network address",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To convert decimal to binary",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv4 Subnetting",
+                              "explanation":  "Phép toán AND (ANDing) giữa địa chỉ IP và Subnet Mask dùng để xác định địa chỉ mạng (Network Address)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q56",
+                              "global_id":  56,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  56,
+                              "question":  "Which command is used to secure access to privileged EXEC mode on a switch?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "enable class",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "secret class",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "enable secret cisco@12345",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "service password-encryption",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Cú pháp đúng để đặt mật khẩu bảo vệ chế độ Privileged EXEC là enable secret \u003cmật_khẩu\u003e."
+                          },
+                          {
+                              "id":  "nwc_fe150_q57",
+                              "global_id":  57,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  57,
+                              "question":  "What does ARP resolve?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "MAC address to IP",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "IP address to hostname",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "IP address to MAC address",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Hostname to MAC address",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Address Resolution (ARP \u0026 ND)",
+                              "explanation":  "Giao thức ARP phân giải địa chỉ IPv4 thành địa chỉ MAC."
+                          },
+                          {
+                              "id":  "nwc_fe150_q58",
+                              "global_id":  58,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  58,
+                              "question":  "What is the aim of an ARP spoofing attack?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To flood the network with ARP reply broadcasts",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To fill switch MAC address tables with bogus addresses",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To associate IP addresses to the wrong MAC address",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To overwhelm network hosts with ARP requests",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Address Resolution (ARP \u0026 ND)",
+                              "explanation":  "ARP spoofing nhằm mục đích ánh xạ địa chỉ IP (như Default Gateway) với địa chỉ MAC sai lệch của kẻ tấn công để nghe lén hoặc đánh chặn dữ liệu."
+                          },
+                          {
+                              "id":  "nwc_fe150_q59",
+                              "global_id":  59,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  59,
+                              "question":  "What is the purpose of the TCP three-way handshake?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To establish connection state and sequence tracking",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To check the integrity of data sent",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To open multiple sockets between client and server",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To notify the server of a new port number",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Quá trình bắt tay 3 bước của TCP dùng để thiết lập trạng thái kết nối và đồng bộ số thứ tự (Sequence Number) trước khi truyền dữ liệu."
+                          },
+                          {
+                              "id":  "nwc_fe150_q60",
+                              "global_id":  60,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  60,
+                              "question":  "A technician needs to configure a point-to-point WAN link and a subnet for a department with 50 hosts. Which subnet mask combinations are appropriate and efficient for these two use cases?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "/30 for WAN, /26 for department",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "/24 for both",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "/27 for WAN, /25 for department",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "/26 for both",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv4 Subnetting",
+                              "explanation":  "Liên kết WAN điểm-điểm cần 2 IP nên dùng /30 (2^2 - 2 = 2 IP). Phòng ban 50 hosts cần /26 (2^6 - 2 = 62 IP)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q61",
+                              "global_id":  61,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  61,
+                              "question":  "What are two actions performed by a Cisco switch? (Choose two.)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "building a routing table that is based on the first IP address in the frame header",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "using the source MAC addresses of frames to build and maintain a MAC address table",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "forwarding frames with unknown destination IP addresses to the default gateway",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "utilizing the MAC address table to forward frames via the destination MAC address",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "examining the destination MAC address to add new entries to the MAC address table",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B",
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "B, D",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Switch học địa chỉ thông qua Source MAC để xây dựng bảng MAC (B) và dựa vào bảng MAC cùng Destination MAC để chuyển tiếp frame (D)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q62",
+                              "global_id":  62,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  62,
+                              "question":  "A router\u0027s G0/0/0 interface is down even though the configuration is correct. What could explain this?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "The \"no shutdown\" command was not applied",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "There is no device connected to the interface",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "The IP address is not unique",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "The password was not encrypted",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "A, B",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "Cisco IOS CLI \u0026 Configuration",
+                              "explanation":  "Cổng bị \"Down\" thường do chưa bật cổng bằng lệnh no shutdown (A) hoặc chưa có kết nối cáp/thiột bị ở đầu bên kia (B)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q63",
+                              "global_id":  63,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  63,
+                              "question":  "Which statement is correct about network protocols?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Network protocols define the type of hardware that is used and how it is mounted in racks.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "They define how messages are exchanged between the source and the destination.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "They all function in the network access layer of TCP/IP.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "They are only required for exchange of messages between devices on remote networks",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Giao thức mạng định nghĩa các quy tắc và cách thức trao đổi thông điệp giữa nguồn và đích."
+                          },
+                          {
+                              "id":  "nwc_fe150_q64",
+                              "global_id":  64,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  64,
+                              "question":  "What are two services provided by the OSI network layer? (Choose two answers)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Performing error detection",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Routing packets toward the destination",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Encapsulating PDUs from the transport layer",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Placement of frames on the media",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "Collision detection",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B",
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "B, C",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "General Networking",
+                              "explanation":  "Tầng Network thực hiện định tuyến gói tin tới đích (B) và đóng gói PDU từ tầng Transport thành Packet (C)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q65",
+                              "global_id":  65,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  65,
+                              "question":  "What is the purpose of encoding?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To increase bandwidth",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To ensure the accuracy and reliability of data by checking for transmission errors",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To convert data into a transmittable format",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To compress data",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Physical Layer \u0026 Media",
+                              "explanation":  "Mã hóa (Encoding) chuyển đổi dữ liệu thành định dạng tín hiệu có thể truyền tải qua môi trường vật lý."
+                          },
+                          {
+                              "id":  "nwc_fe150_q66",
+                              "global_id":  66,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  66,
+                              "question":  "Which two types of IPv6 messages are used in place of ARP for address resolution?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Anycast",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Broadcast",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "echo reply",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "echo request",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "neighbor solicitation",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "F",
+                                                  "content":  "neighbor advertisement",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "E",
+                                                      "F"
+                                                  ],
+                              "correct_answer":  "E, F",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "IPv6 sử dụng hai bản tin Neighbor Solicitation (NS) và Neighbor Advertisement (NA) của ICMPv6 thay cho ARP."
+                          },
+                          {
+                              "id":  "nwc_fe150_q67",
+                              "global_id":  67,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  67,
+                              "question":  "How can an administrator verify the current IP configuration of all router interfaces?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "show ip interface brief",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "display interfaces",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "check interfaces",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "list interfaces",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Cisco IOS CLI \u0026 Configuration",
+                              "explanation":  "Lệnh show ip interface brief hiển thị danh sách tất cả các giao diện cùng trạng thái và địa chỉ IP tương ứng."
+                          },
+                          {
+                              "id":  "nwc_fe150_q68",
+                              "global_id":  68,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  68,
+                              "question":  "Assume a host with IP address 10.1.1.10 wants to request web services from a server at 10.1.1.254. Which of the following would display the correct socket pair?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "1099.1.1.10, 80.1.1.254",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "10.1.1.10:80, 10.1.1.254:1099",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "10.1.1.10:1099, 10.1.1.254:80",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "80.1.1.10, 1099.1.1.254",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Cặp socket có định dạng [IP nguồn]:[Port nguồn ngẫu nhiên] và [IP đích]:[Port dịch vụ Web 80], tương ứng 10.1.1.10:1099, 10.1.1.254:80."
+                          },
+                          {
+                              "id":  "nwc_fe150_q69",
+                              "global_id":  69,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  69,
+                              "question":  "Which two multicast addresses are commonly joined by IPv6 hosts and routers?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "ff02::1",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "ff02::2",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "ff00::1",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "ff01::1",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "A, B",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "ff02::1 là nhóm multicast All-Nodes (mọi thiết bị IPv6 đều tham gia) và ff02::2 là nhóm All-Routers (mọi Router IPv6 đều tham gia)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q70",
+                              "global_id":  70,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  70,
+                              "question":  "What does a router do when it receives a Layer 2 frame over the network medium?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Determines the best path",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "De-encapsulates the frame",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Re-encapsulates the packet into a new frame",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Forwards the new frame appropriate to the medium of that segment of the physical network",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Khi nhận một frame ở Layer 2, router giải đóng gói (de-encapsulates) frame để lấy gói tin Layer 3 bên trong."
+                          },
+                          {
+                              "id":  "nwc_fe150_q71",
+                              "global_id":  71,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  71,
+                              "question":  "A new network administrator has been asked to enter a banner message on a Cisco device. What is the fastest way a network administrator could test whether the banner is properly configured?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Reboot the device.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Enter CTRL-Z at the privileged mode prompt.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Exit global configuration mode.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Power cycle the device.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "Exit privileged EXEC mode and press Enter.",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "E"
+                                                  ],
+                              "correct_answer":  "E",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Cisco IOS CLI \u0026 Configuration",
+                              "explanation":  "Thoát khỏi chế độ Privileged EXEC (bằng lệnh exit) và nhấn Enter để quay về màn hình bắt đầu phiên làm việc là cách nhanh nhất để kiểm tra banner MOTD."
+                          },
+                          {
+                              "id":  "nwc_fe150_q72",
+                              "global_id":  72,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  72,
+                              "question":  "Under which two circumstances will a switch flood a frame out of every port except the port that the frame was received on? (Choose two answers)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "The frame has the broadcast address as the destination address.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "The destination address is unknown to the switch.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "The source address in the frame header is the broadcast address.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "The source address in the frame is a multicast address.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "The destination address in the frame is a known unicast address.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "A, B",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Switch sẽ flood frame ra tất cả các cổng (trừ cổng nhận) khi MAC đích là địa chỉ Broadcast (A) hoặc Unknown Unicast - chưa có trong bảng MAC (B)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q73",
+                              "global_id":  73,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  73,
+                              "question":  "What does the OSI model help with in networking?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Encryption",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Address resolution",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Troubleshooting and standardization",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Server hosting",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Mô hình OSI giúp chuẩn hóa giao thức mạng và hỗ trợ khắc phục sự cố (troubleshooting) theo từng tầng."
+                          },
+                          {
+                              "id":  "nwc_fe150_q74",
+                              "global_id":  74,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  74,
+                              "question":  "What kind of threat is described when a threat actor impersonates another person to obtain credit information about that person?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Data loss or manipulation",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Disruption of service",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Identity theft",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Information theft",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Giả mạo danh tính người khác để lấy thông tin tín dụng/cá nhân là hành vi đánh cắp danh tính (Identity theft)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q75",
+                              "global_id":  75,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  75,
+                              "question":  "Which statement accurately describes a TCP/IP encapsulation process when a PC is sending data to the network?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Data is sent from the internet layer to the network access layer.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Packets are sent from the network access layer to the transport layer.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Segments are sent from the transport layer to the internet layer.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Frames are sent from the network access layer to the internet layer.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Khi gửi dữ liệu, các Segments được chuyển từ tầng Transport xuống tầng Internet để đóng gói thành Packets."
+                          },
+                          {
+                              "id":  "nwc_fe150_q76",
+                              "global_id":  76,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  76,
+                              "question":  "What is the purpose of port numbers in TCP and UDP communication?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To identify specific applications running on a device",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To define the size of a packet",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To assign MAC addresses",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To establish a physical connection",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Số hiệu cổng (port numbers) dùng để định danh các ứng dụng hoặc dịch vụ cụ thể đang chạy trên thiết bị."
+                          },
+                          {
+                              "id":  "nwc_fe150_q77",
+                              "global_id":  77,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  77,
+                              "question":  "What is the purpose of a default gateway?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To resolve MAC addresses",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To connect to the same LAN",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To forward packets to remote networks",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To block unwanted traffic",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Default gateway dùng để chuyển tiếp các gói tin từ mạng cục bộ đi tới các mạng từ xa (remote networks)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q78",
+                              "global_id":  78,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  78,
+                              "question":  "Which layer of the OSI model is responsible for describing the methods for exchanging data frames over a common media?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Network",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Transport",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Data Link",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Physical",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Tầng Data Link quy định các phương thức trao đổi khung dữ liệu (frames) qua môi trường truyền dẫn chung."
+                          },
+                          {
+                              "id":  "nwc_fe150_q79",
+                              "global_id":  79,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  79,
+                              "question":  "An employee at a branch office is creating a quote for a customer. To do this, the employee needs to access confidential pricing information from internal servers at the Head Office. What type of network would the employee access?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "an intranet",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "the Internet",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "an extranet",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "a local area network",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Hệ thống mạng nội bộ chỉ dành riêng cho nhân viên trong tổ chức truy cập gọi là Intranet."
+                          },
+                          {
+                              "id":  "nwc_fe150_q80",
+                              "global_id":  80,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  80,
+                              "question":  "What is the purpose of the IPv6 unique local address (ULA)?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To allow devices to communicate with the global internet",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To provide a globally unique address",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To allow communication within a local site without global routing",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Địa chỉ Unique Local Address (ULA - fc00::/7) dùng cho giao tiếp nội bộ trong một tổ chức mà không định tuyến ra Internet toàn cầu."
+                          },
+                          {
+                              "id":  "nwc_fe150_q81",
+                              "global_id":  81,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  81,
+                              "question":  "What is the primary purpose of the Address Resolution Protocol (ARP)?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To resolve IPv6 addresses to MAC addresses.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To resolve domain names to IP addresses.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To resolve IPv4 addresses to MAC addresses.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To assign IP addresses to hosts dynamically.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Address Resolution (ARP \u0026 ND)",
+                              "explanation":  "Mục đích chính của ARP là phân giải địa chỉ IPv4 thành địa chỉ MAC."
+                          },
+                          {
+                              "id":  "nwc_fe150_q82",
+                              "global_id":  82,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  82,
+                              "question":  "Which command can be used to test network connectivity and measure the time it takes for a packet to reach a destination?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "ipconfig",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "traceroute",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "ping",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "telnet",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Lệnh ping dùng để kiểm tra kết nối mạng và đo thời gian phản hồi khứ hồi (Round-Trip Time)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q83",
+                              "global_id":  83,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  83,
+                              "question":  "What are the two most commonly referenced fields in an IPv4 packet header that indicate where the packet is coming from and where it is going? (Choose two.)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Destination IP address",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Protocol",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Time to live",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Differentiated Service (DS)",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "Source IP address",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "E"
+                                                  ],
+                              "correct_answer":  "A, E",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "General Networking",
+                              "explanation":  "Hai trường cho biết gói tin đi từ đâu và đến đâu là Source IP address (E) và Destination IP address (A)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q84",
+                              "global_id":  84,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  84,
+                              "question":  "Switch1\u003e config t% Invalid input detected at \u0027^\u0027 marker.Refer to the exhibit. An administrator is trying to configure the switch but receives the error message that is displayed in the exhibit. What is the problem?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "The entire command, configure terminal, must be used.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "The administrator is already in global configuration mode.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "The administrator must first enter privileged EXEC mode before issuing the command.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "The administrator must connect via the console port to access global configuration mode.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Thiết bị đang ở User EXEC mode (Switch1\u003e). Quản trị viên phải vào Privileged EXEC mode (bằng lệnh enable) trước khi gõ lệnh config t."
+                          },
+                          {
+                              "id":  "nwc_fe150_q85",
+                              "global_id":  85,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  85,
+                              "question":  "Which name is assigned to the transport layer PDU?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "bits",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "data",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "frame",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "packet",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "segments",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "E"
+                                                  ],
+                              "correct_answer":  "E",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Đơn vị dữ liệu giao thức (PDU) ở tầng Transport được gọi là Segment."
+                          },
+                          {
+                              "id":  "nwc_fe150_q86",
+                              "global_id":  86,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  86,
+                              "question":  "NWC204_SP26_RE | Multiple Choice Question 45 (Choose 1 answer)IP Address: 192.168.1.95 | Subnet Mask: 255.255.255.0 | Default Gateway: 192.168.1.254Refer to the exhibit. Consider the IP address configuration shown from PC1. What is a description of the default gateway address?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "It is the IP address of the Router1 interface that connects the company to the Internet.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "It is the IP address of the ISP network device located in the cloud.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "It is the IP address of the Router1 interface that connects the PC1 LAN to Router1.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "It is the IP address of Switch1 that connects PC1 to other devices on the same LAN.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv4 Subnetting",
+                              "explanation":  "Default Gateway của PC1 là địa chỉ IP của cổng trên Router1 nối trực tiếp với mạng LAN của PC1."
+                          },
+                          {
+                              "id":  "nwc_fe150_q87",
+                              "global_id":  87,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  87,
+                              "question":  "Which statement describes a feature of the IP protocol?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "IP encapsulation is modified based on network media.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "IP relies on Layer 2 protocols for transmission error control.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "MAC addresses are used during the IP packet encapsulation.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "IP relies on upper layer services to handle situations of missing or out-of-order packets.",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "D",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Giao thức IP hoạt động theo cơ chế best-effort nên dựa vào các dịch vụ tầng trên (như TCP) để xử lý việc mất gói tin hoặc gói tin đến sai thứ tự."
+                          },
+                          {
+                              "id":  "nwc_fe150_q88",
+                              "global_id":  88,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  88,
+                              "question":  "Which part of a GUA is assigned by the ISP?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Global routing prefix",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Global routing prefix and subnet ID",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Prefix",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "RIR prefix",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Trong địa chỉ IPv6 Global Unicast Address (GUA), phần Global routing prefix được ISP cấp cho khách hàng/tổ chức."
+                          },
+                          {
+                              "id":  "nwc_fe150_q89",
+                              "global_id":  89,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  89,
+                              "question":  "What is the purpose of the Organizationally Unique Identifier (OUI) in an Ethernet MAC address?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To identify the specific device on the network.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To identify the vendor of the Ethernet device.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To specify the network layer protocol being used.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To detect errors within the Ethernet frame.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Address Resolution (ARP \u0026 ND)",
+                              "explanation":  "Mã OUI (24 bit đầu của địa chỉ MAC) do IEEE cấp để định danh nhà sản xuất (vendor) của thiết bị mạng."
+                          },
+                          {
+                              "id":  "nwc_fe150_q90",
+                              "global_id":  90,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  90,
+                              "question":  "Which of the following techniques use native IPv6 connectivity?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Dual stack",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Tunneling",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Translation",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "All of the above",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Dual stack cho phép các thiết bị chạy song song cả IPv4 và IPv6 nguyên bản (native) trên cùng hạ tầng mạng."
+                          },
+                          {
+                              "id":  "nwc_fe150_q91",
+                              "global_id":  91,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  91,
+                              "question":  "A network administrator is connecting two modern switches using a straight-through cable. The switches are new and have never been configured. Which three statements are correct about the final result of the connection? (Choose three.)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "The link between the switches will work at the fastest speed that is supported by both switches.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "The link between switches will work as full-duplex.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "If both switches support different speeds, they will each work at their own fastest speed.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "The auto-MDIX feature will configure the interfaces eliminating the need for a crossover cable.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "The connection will not be possible unless the administrator changes the cable to a crossover cable.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "F",
+                                                  "content":  "The duplex capability has to be manually configured because it cannot be negotiated.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "B",
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "A, B, D",
+                              "is_multiple":  true,
+                              "required_count":  3,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Hai Switch hiện đại sẽ tự động thương lượng tốc độ cao nhất mà cả hai cùng hỗ trợ (A), hoạt động ở chế độ full-duplex (B) và dùng tính năng auto-MDIX để tự nhận cáp thẳng mà không cần cáp chéo (D)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q92",
+                              "global_id":  92,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  92,
+                              "question":  "A networking technician is working on the wireless network at a medical clinic. The technician accidentally sets up the wireless network so that patients can see the medical records data of other patients. Which of the network characteristics has been violated in this situation?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "fault tolerance",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "scalability",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "security",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Quality of Service (QoS)",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "reliability",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Việc lộ dữ liệu hồ sơ bệnh án cho người không có thẩm quyền đã vi phạm tính bảo mật (Security) của mạng."
+                          },
+                          {
+                              "id":  "nwc_fe150_q93",
+                              "global_id":  93,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  93,
+                              "question":  "What are two functions of NVRAM? (Choose two.)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "to store the routing table",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "to retain contents when power is removed",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "to store the startup configuration file",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "to contain the running configuration file",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "to store the ARP table",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B",
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "B, C",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "General Networking",
+                              "explanation":  "NVRAM lưu giữ nội dung không bị mất khi tắt nguồn (B) và chứa file cấu hình khởi động startup-config (C)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q94",
+                              "global_id":  94,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  94,
+                              "question":  "NWC204_SU26_FE | Multiple Choice Question 37 (Choose 1 answer)Match the IPv6 address with the IPv6 address type.Types: A. link-local | B. solicited node multicast | C. global unicast | D. all node multicast | E. loopback | F. unique localAddresses: 1. 2001:DB8::BAF:3F57 | 2. FF02::1 | 3. ::1 | 4. FF02::1:FFAE:F85F",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "C1-D2-E3-B4",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "C2-D1-E3-A4",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "C1-F2-E4-B3",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "C4-D2-E3-B1",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "2001:DB8::BAF:3F57 là Global unicast (C1); FF02::1 là All node multicast (D2); ::1 là Loopback (E3); FF02::1:FFAE:F85F là Solicited node multicast (B4)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q95",
+                              "global_id":  95,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  95,
+                              "question":  "UDP and TCP belong to which layer of the TCP/IP protocol?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Application",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Transport",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Internet",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Network access",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "UDP và TCP thuộc tầng Giao vận (Transport layer)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q96",
+                              "global_id":  96,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  96,
+                              "question":  "What action does a switch take when it receives a frame with a destination MAC address that is not in its MAC address table?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "It discards the frame immediately.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "It sends the frame back to the source device.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "It forwards the frame out all ports except the incoming port.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "It sends an ARP request to find the destination device.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Address Resolution (ARP \u0026 ND)",
+                              "explanation":  "Khi MAC đích không có trong bảng MAC, Switch sẽ flood (chuyển tiếp) frame ra tất cả các cổng ngoại trừ cổng nhận vào."
+                          },
+                          {
+                              "id":  "nwc_fe150_q97",
+                              "global_id":  97,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  97,
+                              "question":  "What are two examples of the cut-through switching method? (Choose two.)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "store-and-forward switching",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "fast-forward switching",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "CRC switching",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "fragment-free switching",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "QOS switching",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B",
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "B, D",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Hai phương thức thuộc nhóm chuyển mạch Cut-through là Fast-forward switching (B) và Fragment-free switching (D)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q98",
+                              "global_id":  98,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  98,
+                              "question":  "Which two models are used to describe network protocols and operations? (Select two answers)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "TCP/IP",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "OSI",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "ISO",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "HTTP",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "A, B",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "General Networking",
+                              "explanation":  "TCP/IP và OSI là hai mô hình được sử dụng để mô tả các giao thức và hoạt động mạng."
+                          },
+                          {
+                              "id":  "nwc_fe150_q99",
+                              "global_id":  99,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  99,
+                              "question":  "What is the broadcast address for the IP subnet 192.168.10.0/24?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "192.168.10.0",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "192.168.10.255",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "192.168.10.1",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "192.168.11.0",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv4 Subnetting",
+                              "explanation":  "Địa chỉ broadcast của mạng 192.168.10.0/24 có toàn bộ 8 bit host bằng 1, tương ứng là 192.168.10.255."
+                          },
+                          {
+                              "id":  "nwc_fe150_q100",
+                              "global_id":  100,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  100,
+                              "question":  "A network administrator enters the service password-encryption command into the configuration mode of a router. What does this command accomplish?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "This command encrypts passwords as they are transmitted across serial WAN links.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "This command prevents someone from viewing the running configuration passwords.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "This command enables a strong encryption algorithm for the enable secret password command.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "This command automatically encrypts passwords in configuration files that are currently stored in NVRAM",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "This command provides an exclusive encrypted password for external service personnel who are required to do router maintenance.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Cisco IOS CLI \u0026 Configuration",
+                              "explanation":  "Lệnh service password-encryption mã hóa các mật khẩu hiển thị trong file cấu hình để tránh bị đọc trộm."
+                          },
+                          {
+                              "id":  "nwc_fe150_q101",
+                              "global_id":  101,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  101,
+                              "question":  "Which of the following is a characteristic of a peer-to-peer (P2P) network?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "It is highly scalable.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "It has centralized administration.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "It is easy to set up.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "It is very secure.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Mạng ngang hàng (P2P) có đặc điểm là dễ thiết lập (easy to set up), chi phí thấp nhưng khó mở rộng và không quản trị tập trung."
+                          },
+                          {
+                              "id":  "nwc_fe150_q102",
+                              "global_id":  102,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  102,
+                              "question":  "Which three fields are used in a UDP segment header? (Choose three.)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Window Size",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Length",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Source Port",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Acknowledgment Number",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "Checksum",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "F",
+                                                  "content":  "Sequence Number",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B",
+                                                      "C",
+                                                      "E"
+                                                  ],
+                              "correct_answer":  "B, C, E",
+                              "is_multiple":  true,
+                              "required_count":  3,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "UDP header chỉ gồm 4 trường: Source Port (C), Destination Port, Length (B) và Checksum (E)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q103",
+                              "global_id":  103,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  103,
+                              "question":  "Which of the following is a private IP address according to RFC 1918? (Select two answers)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "10.0.0.25",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "100.64.0.1",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "172.31.200.10",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "192.169.1.5",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "A, C",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "General Networking",
+                              "explanation":  "Các dải IP Private theo RFC 1918 gồm: 10.0.0.0/8 (A), 172.16.0.0 – 172.31.255.255 (C), và 192.168.0.0/16."
+                          },
+                          {
+                              "id":  "nwc_fe150_q104",
+                              "global_id":  104,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  104,
+                              "question":  "What two criteria are used to help select a network medium from various network media? (Choose two answers)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "The types of data that need to be prioritized",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "The cost of the end devices utilized in the network",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "The distance the selected medium can successfully carry a signal",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "The number of intermediate devices installed in the network",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "The environment where the selected medium is to be installed",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C",
+                                                      "E"
+                                                  ],
+                              "correct_answer":  "C, E",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "General Networking",
+                              "explanation":  "Hai tiêu chí chọn môi trường truyền dẫn là khoảng cách truyền tín hiệu hiệu quả (C) và môi trường lắp đặt thực tế (E)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q105",
+                              "global_id":  105,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  105,
+                              "question":  "Match the cable types: Rollover, Straight-through, Crossover.",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "1 - rollover, 2 - crossover, 3 - straight-through",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "1 - rollover, 2 - straight-through, 3 - crossover",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "1 - crossover, 2 - straight-through, 3 - rollover",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "1 - crossover, 2 - rollover, 3 - straight-through",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Physical Layer \u0026 Media",
+                              "explanation":  "(1) Rollover dùng nối cổng Console; (2) Straight-through nối hai thiết bị khác loại; (3) Crossover nối hai thiết bị cùng loại."
+                          },
+                          {
+                              "id":  "nwc_fe150_q106",
+                              "global_id":  106,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  106,
+                              "question":  "What source IP address does a router use by default when the traceroute command is issued?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "the highest configured IP address on the router",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "a loopback IP address",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "the IP address of the outbound interface",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "the lowest configured IP address on the router",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Network Troubleshooting \u0026 ICMP",
+                              "explanation":  "Mặc định khi router thực hiện lệnh traceroute, nó lấy địa chỉ IP của cổng xuất (outbound interface) làm IP nguồn."
+                          },
+                          {
+                              "id":  "nwc_fe150_q107",
+                              "global_id":  107,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  107,
+                              "question":  "What is the main purpose of ICMP?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To provide reliable, connection-oriented communication.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To deliver data between applications.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To test and report on network connectivity and issues.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To secure network devices from attacks.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Network Troubleshooting \u0026 ICMP",
+                              "explanation":  "Mục đích chính của ICMP là kiểm tra kết nối và gửi thông báo phản hồi các sự cố truyền gói tin trên mạng."
+                          },
+                          {
+                              "id":  "nwc_fe150_q108",
+                              "global_id":  108,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  108,
+                              "question":  "Which two fields are the same in a TCP and UDP header? (Choose two.)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Control bits",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Destination port number",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Sequence number",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Source port number",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "Well-known port number",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B",
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "B, D",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Cả TCP và UDP header đều có hai trường giống nhau là Source port number (D) và Destination port number (B)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q109",
+                              "global_id":  109,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  109,
+                              "question":  "What is a key difference between IPv4 and IPv6 packet headers?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "IPv6 headers are simpler and have fewer fields than IPv4 headers",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "IPv6 headers are more complex than IPv4 headers",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "IPv4 headers are always smaller than IPv6 headers",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "IPv6 requires NAT, while IPv4 does not",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Header của IPv6 được thiết kế tối giản hơn và có ít trường dữ liệu hơn so với IPv4 header, giúp router xử lý nhanh hơn."
+                          },
+                          {
+                              "id":  "nwc_fe150_q110",
+                              "global_id":  110,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  110,
+                              "question":  "Match the commands to the correct actions. (Not all options are used.)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "A3-B5-C1",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "A2-B3-C4",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "A1-B2-C3",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "A4-B1-C5",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Ghép nối các câu lệnh Cisco IOS cơ bản với chức năng tương ứng theo chuẩn CCNA (A3-B5-C1)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q111",
+                              "global_id":  111,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  111,
+                              "question":  "What type of address is 198.133.219.162?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Public",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "link-local",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Loopback",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "multicast",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "198.133.219.162 không nằm trong các dải Private, Loopback hay Multicast nên là địa chỉ IP Public."
+                          },
+                          {
+                              "id":  "nwc_fe150_q112",
+                              "global_id":  112,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  112,
+                              "question":  "Which type of network design allows devices to act as both clients and servers?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Client-server network",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "LAN",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "WAN",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Peer-to-peer network",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "D",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Mạng ngang hàng (Peer-to-peer network) cho phép các thiết bị đóng vai trò vừa là client vừa là server."
+                          },
+                          {
+                              "id":  "nwc_fe150_q113",
+                              "global_id":  113,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  113,
+                              "question":  "Which topology displays networking device layer IP addresses?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Aerial topology",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "IP address topology",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Logical topology",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Physical topology",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Sơ đồ logic (Logical topology) hiển thị thông tin địa chỉ IP, tên giao diện và cách dữ liệu đi qua mạng."
+                          },
+                          {
+                              "id":  "nwc_fe150_q114",
+                              "global_id":  114,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  114,
+                              "question":  "Which device performs the function of determining the path that messages should take through internetworks?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "a router",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "a firewall",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "a web server",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "a DSL modem",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Router thực hiện chức năng xác định đường đi (path selection) tốt nhất cho gói tin qua các liên mạng."
+                          },
+                          {
+                              "id":  "nwc_fe150_q115",
+                              "global_id":  115,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  115,
+                              "question":  "Which two benefits result from using a layered model in networking? (Select two answers)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Facilitates troubleshooting",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Promotes interoperability",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Increases application processing time",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Restricts vendor flexibility",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "A, B",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "General Networking",
+                              "explanation":  "Mô hình phân tầng giúp dễ dàng xác định/khắc phục sự cố (A) và thúc đẩy tính tương thích giữa thiết bị của các hãng khác nhau (B)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q116",
+                              "global_id":  116,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  116,
+                              "question":  "An administrator wants to create four subnetworks from the network address 192.168.1.0/24. What is the network address and subnet mask of the second useable subnet?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Subnetwork 192.168.1.64 subnet mask 255.255.255.192",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Subnetwork 192.168.1.32 subnet mask 255.255.255.240",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Subnetwork 192.168.1.64 subnet mask 255.255.255.240",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Subnetwork 192.168.1.128 subnet mask 255.255.255.192",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "Subnetwork 192.168.1.8 subnet mask 255.255.255.224",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv4 Subnetting",
+                              "explanation":  "Chia 4 mạng con cần mượn 2 bit (2^2 = 4), mask mới là /26 (255.255.255.192), bước nhảy 256 - 192 = 64. Mạng 1 là 192.168.1.0/26, mạng 2 là 192.168.1.64/26."
+                          },
+                          {
+                              "id":  "nwc_fe150_q117",
+                              "global_id":  117,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  117,
+                              "question":  "This is a function of the OSI session layer.",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "compress and decompress data",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "provide an interface between applications",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "format data for the application layer",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "exchange of information to initiate dialog between peers",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "D",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Tầng Session chịu trách nhiệm trao đổi thông tin để khởi tạo, duy trì và kết thúc phiên hội thoại (dialog) giữa các thiết bị."
+                          },
+                          {
+                              "id":  "nwc_fe150_q118",
+                              "global_id":  118,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  118,
+                              "question":  "Which statement about IPv6 addresses is true?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "IPv6 addresses are expressed in decimal format.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "IPv6 addresses use 128 bits and are expressed in hexadecimal format.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "IPv6 addresses use 32 bits and are expressed in binary format.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "IPv6 addresses are composed of two parts: network and host.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Địa chỉ IPv6 có độ dài 128 bit và được biểu diễn dưới dạng số thập lục phân (hexadecimal)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q119",
+                              "global_id":  119,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  119,
+                              "question":  "What happens if an Ethernet frame is less than 64 bytes?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "It is fragmented",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "It is considered valid",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "It is dropped",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "It is routed",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Khung Ethernet nhỏ hơn kích thước tối thiểu 64 bytes bị coi là lỗi (runt frame) và sẽ bị hủy bỏ (dropped)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q120",
+                              "global_id":  120,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  120,
+                              "question":  "A Layer 2 switch is used to switch incoming frames from a 1000BASE-T port to a port connected to a 100Base-T network. Which method of memory buffering would work best for this task?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Port-based buffering",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Level 1 cache buffering",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Shared memory buffering",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Fixed configuration buffering",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Bộ nhớ đệm chia sẻ (Shared memory buffering) hiệu quả nhất cho chuyển mạch bất đối xứng giữa các cổng có tốc độ khác nhau (như 1 Gbps xuống 100 Mbps)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q121",
+                              "global_id":  121,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  121,
+                              "question":  "NWC204_SU26_FE | Multiple Choice Question 46 (Choose 1 answer)[Image of two fiber optic cables with ST connectors]Refer to the graphic. What type of cabling is shown?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "fiber",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "STP",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "UTP",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "coax",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Physical Layer \u0026 Media",
+                              "explanation":  "Hình ảnh hiển thị cáp quang (fiber optic cable)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q122",
+                              "global_id":  122,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  122,
+                              "question":  "How does a router process a packet when no matching route exists in the routing table?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "It forwards the packet to the default route (if configured) or drops it",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "It sends the packet to all interfaces",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "It assigns a random route to the packet",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "It broadcasts the packet across the network",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Nếu không có tuyến đường khớp trong bảng định tuyến, router sẽ chuyển gói tin qua Default Route (nếu có) hoặc hủy gói tin (drop)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q123",
+                              "global_id":  123,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  123,
+                              "question":  "Which access method would be most appropriate if you were in the equipment room with a new switch that needs to be configured?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Console",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Telnet/SSH",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Aux",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Với một Switch mới nguyên chưa có cấu hình IP, phương thức truy cập phù hợp nhất tại phòng máy là qua cổng Console."
+                          },
+                          {
+                              "id":  "nwc_fe150_q124",
+                              "global_id":  124,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  124,
+                              "question":  "What is the primary responsibility of the transport layer?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Formatting, or presenting, data into a compatible format.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Tracking individual conversations and segmenting data.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Translating domain names to IP addresses.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Securing the network from external threats.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Trách nhiệm chính của tầng Transport là theo dõi các phiên giao tiếp riêng biệt và phân đoạn dữ liệu (segmenting data)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q125",
+                              "global_id":  125,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  125,
+                              "question":  "What does the OSI model help with in networking?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Encryption",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Address resolution",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Troubleshooting and standardization",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Server hosting",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Mô hình OSI hỗ trợ việc chuẩn hóa và xử lý sự cố mạng (troubleshooting and standardization)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q126",
+                              "global_id":  126,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  126,
+                              "question":  "What type of IPv6 address begins with fe80?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "GUA",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "LLA",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Multicast address",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "None. An IPv6 address must begin with 2001.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Địa chỉ Link-Local Address (LLA) trong IPv6 bắt đầu bằng fe80::/10."
+                          },
+                          {
+                              "id":  "nwc_fe150_q127",
+                              "global_id":  127,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  127,
+                              "question":  "Which method allows a device to obtain an IPv6 address dynamically without the need for a DHCP server?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Stateful DHCPv6",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Stateless Address Autoconfiguration (SLAAC)",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Manual Configuration",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "NAT64",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "SLAAC cho phép thiết bị tự động cấu hình địa chỉ IPv6 dựa vào bản tin Router Advertisement mà không cần máy chủ DHCPv6."
+                          },
+                          {
+                              "id":  "nwc_fe150_q128",
+                              "global_id":  128,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  128,
+                              "question":  "Which of the four basic characteristics of a reliable network architecture refers to the ability to quickly and easily expand to support new users and applications?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Fault Tolerance",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Scalability",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Quality of Service (QoS)",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Security",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Khả năng mở rộng nhanh chóng để hỗ trợ người dùng và ứng dụng mới được gọi là Scalability (Khả năng mở rộng)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q129",
+                              "global_id":  129,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  129,
+                              "question":  "Which command can be used on a Cisco router to display all interfaces, the IPv4 address assigned, and the current status?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "show interface fa0/1",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "show ip route",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "show ip interface brief",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "ping",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Cisco IOS CLI \u0026 Configuration",
+                              "explanation":  "Lệnh show ip interface brief hiển thị danh sách tất cả cổng mạng, địa chỉ IPv4 được gán và trạng thái hoạt động hiện tại."
+                          },
+                          {
+                              "id":  "nwc_fe150_q130",
+                              "global_id":  130,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  130,
+                              "question":  "Which IPv6 address type is used for communication within a single network segment and cannot be routed?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Global Unicast Address (GUA)",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Link-Local Address (LLA)",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Unique Local Address (ULA)",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Multicast Address",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Địa chỉ Link-Local (LLA) chỉ dùng để giao tiếp trong phạm vi một phân đoạn mạng nội bộ và không được định tuyến qua Router."
+                          },
+                          {
+                              "id":  "nwc_fe150_q131",
+                              "global_id":  131,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  131,
+                              "question":  "What is the prefix length of an IPv6 address that is typically used for a single subnet?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "/32",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "/48",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "/64",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "/128",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Độ dài tiền tố chuẩn thường dùng cho một mạng con (subnet) IPv6 đơn lẻ là /64."
+                          },
+                          {
+                              "id":  "nwc_fe150_q132",
+                              "global_id":  132,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  132,
+                              "question":  "Which of the following fiber-optic cable types can travel approximately 100 km?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Multimode",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Single-mode",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Physical Layer \u0026 Media",
+                              "explanation":  "Cáp quang Single-mode sử dụng tia laser giúp truyền tín hiệu đi xa lên tới khoảng 100 km."
+                          },
+                          {
+                              "id":  "nwc_fe150_q133",
+                              "global_id":  133,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  133,
+                              "question":  "In an IPv4 packet header, what is the purpose of the Time-to-Live (TTL) field?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "To identify the upper-level protocol like TCP or UDP.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "To detect corruption in the IPv4 header.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "To limit the lifetime of a packet, acting as a hop count.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "To reassemble fragmented packets at the destination.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Trường TTL giới hạn thời gian sống của gói tin bằng cách giảm đi 1 sau mỗi hop (router), tránh lặp gói tin vô hạn."
+                          },
+                          {
+                              "id":  "nwc_fe150_q134",
+                              "global_id":  134,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  134,
+                              "question":  "When 2 or more bits in a data unit has been changed during the transmission, the error is called:",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "random error",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "burst error",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "inverted error",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "double error",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Khi từ 2 bit trở lên trong một đơn vị dữ liệu bị thay đổi trong lúc truyền, lỗi đó được gọi là lỗi chùm (burst error)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q135",
+                              "global_id":  135,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  135,
+                              "question":  "NWC204_SP26_RE | Multiple Choice Question 26 (Choose 1 answer)[An RJ-45 connector terminated on a network cable, showing the outer green sheath stripped back too far and exposing the untwisted wires before they enter the connector.]Refer to the exhibit. What is wrong with the displayed termination?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "The woven copper braid should not have been removed.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "The untwisted length of each wire is too long.",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "The wrong type of connector is being used.",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "The wires are too thick for the connector that is used.",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Physical Layer \u0026 Media",
+                              "explanation":  "Đầu cáp bấm sai quy cách vì phần dây bị tuốt vỏ và tháo xoắn bên ngoài đầu RJ-45 quá dài, dễ gây nhiễu xuyên âm (crosstalk)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q136",
+                              "global_id":  136,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  136,
+                              "question":  "Which Cisco IOS command mode allows access to all commands and features and is identified by a prompt ending in the # symbol?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "User EXEC Mode",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Privileged EXEC Mode",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Global Configuration Mode",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Interface Configuration Mode",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Cisco IOS CLI \u0026 Configuration",
+                              "explanation":  "Chế độ Privileged EXEC Mode có dấu nhắc kết thúc bằng ký hiệu # và cho phép truy cập mọi lệnh kiểm tra/quản trị."
+                          },
+                          {
+                              "id":  "nwc_fe150_q137",
+                              "global_id":  137,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  137,
+                              "question":  "Which interface allows remote management of a Layer 2 switch?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "The AUX interface",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "The console port interface",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "The switch virtual interface",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "The first Ethernet port interface",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Switch Virtual Interface (SVI) là giao diện ảo được gán địa chỉ IP để quản trị từ xa một Switch Layer 2."
+                          },
+                          {
+                              "id":  "nwc_fe150_q138",
+                              "global_id":  138,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  138,
+                              "question":  "What are three responsibilities of the transport layer? (Choose three.)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "meeting the reliability requirements of applications, if any",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "multiplexing multiple communication streams from many users or applications on the same network",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "identifying the applications and services on the client and server that should handle transmitted data",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "directing packets towards the destination network",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "formatting data into a compatible form for receipt by the destination devices",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "F",
+                                                  "content":  "conducting error detection of the contents in frames",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "B",
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "A, B, C",
+                              "is_multiple":  true,
+                              "required_count":  3,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Ba nhiệm vụ của tầng Transport gồm: đáp ứng yêu cầu về độ tin cậy của ứng dụng (A), ghép kênh các luồng giao tiếp (B) và định danh ứng dụng/dịch vụ thông qua số port (C)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q139",
+                              "global_id":  139,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  139,
+                              "question":  "What are the three basic parts of a data link frame?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Header, Data, and Trailer",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Source, Destination, and Data",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Start, Control, and Stop",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Addressing, Type, and Error Detection",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Ethernet Switching \u0026 Data Link",
+                              "explanation":  "Ba thành phần cơ bản của một khung dữ liệu (Data link frame) là Header, Data và Trailer."
+                          },
+                          {
+                              "id":  "nwc_fe150_q140",
+                              "global_id":  140,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  140,
+                              "question":  "What is the correct order of the TCP three-way handshake?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "ACK, SYN, SYN-ACK",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "SYN, SYN-ACK, ACK",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "SYN-ACK, ACK, FIN",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "FIN, ACK, SYN",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "B"
+                                                  ],
+                              "correct_answer":  "B",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Thứ tự đúng của quá trình bắt tay 3 bước TCP là: SYN -\u003e SYN-ACK -\u003e ACK."
+                          },
+                          {
+                              "id":  "nwc_fe150_q141",
+                              "global_id":  141,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  141,
+                              "question":  "A technician configures a router interface with \"ipv6 address fe80::1 link-local\". What is the purpose of this address?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "It enables communication on the local link",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "It routes packets to other networks",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "It acts as a default gateway for global IPv6 traffic",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "It is a multicast address",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Địa chỉ Link-local (fe80::1) giúp bật khả năng giao tiếp IPv6 trong phạm vi đường truyền nội bộ (local link)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q142",
+                              "global_id":  142,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  142,
+                              "question":  "Which email protocol is used to retrieve mail from a server and typically deletes the messages on the server after download?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "SMTP",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "IMAP",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "POP",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Giao thức POP (POP3) tải email từ server về máy khách và mặc định xóa thư trên server sau khi tải xong."
+                          },
+                          {
+                              "id":  "nwc_fe150_q143",
+                              "global_id":  143,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  143,
+                              "question":  "Which ICMP message is used by the traceroute utility during the process of finding the path between two end hosts?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Destination unreachable",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Ping",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Redirect",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Time exceeded",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "D",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Network Troubleshooting \u0026 ICMP",
+                              "explanation":  "Tiện ích traceroute dựa vào bản tin ICMP \"Time exceeded\" trả về khi TTL giảm về 0 để ghi nhận từng trạm router trên đường đi."
+                          },
+                          {
+                              "id":  "nwc_fe150_q144",
+                              "global_id":  144,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  144,
+                              "question":  "Which two functions are primary functions of a router? (Choose two.)",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "packet forwarding",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Microsegmentation",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "domain name resolution",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "path selection",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "flow control",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A",
+                                                      "D"
+                                                  ],
+                              "correct_answer":  "A, D",
+                              "is_multiple":  true,
+                              "required_count":  2,
+                              "category":  "General Networking",
+                              "explanation":  "Hai chức năng chính của Router là chuyển tiếp gói tin (packet forwarding - A) và lựa chọn đường đi (path selection - D)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q145",
+                              "global_id":  145,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  145,
+                              "question":  "What is the length of an IPv6 address?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "32 bits",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "64 bits",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "128 bits",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "256 bits",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Địa chỉ IPv6 có độ dài 128 bits."
+                          },
+                          {
+                              "id":  "nwc_fe150_q146",
+                              "global_id":  146,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  146,
+                              "question":  "What field is used by the destination host to reassemble segments into the original order?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Control bits",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Destination port",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Sequence number",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Source port",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "Window size",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Transport Layer (TCP/UDP)",
+                              "explanation":  "Trường Sequence number trong TCP header được thiết bị đích dùng để sắp xếp lại các phân đoạn dữ liệu theo đúng thứ tự ban đầu."
+                          },
+                          {
+                              "id":  "nwc_fe150_q147",
+                              "global_id":  147,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  147,
+                              "question":  "A technician is configuring a router to allow for all forms of management access. As part of each different type of access, the technician is trying to type the command login. Which configuration mode should be entered to do this task?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "User executive mode",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Global configuration mode",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Any line configuration mode",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Privileged EXEC mode",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "C"
+                                                  ],
+                              "correct_answer":  "C",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "General Networking",
+                              "explanation":  "Lệnh login được cấu hình bên trong chế độ Line configuration mode (như line console 0, line vty 0 4)."
+                          },
+                          {
+                              "id":  "nwc_fe150_q148",
+                              "global_id":  148,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  148,
+                              "question":  "Which encoding technique is used to convert digital data into digital signals?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "Manchester encoding",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "Modulation",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "Signal interference",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "Frequency hopping",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "Physical Layer \u0026 Media",
+                              "explanation":  "Mã hóa Manchester (Manchester encoding) là kỹ thuật dùng để chuyển đổi dữ liệu số thành tín hiệu số."
+                          },
+                          {
+                              "id":  "nwc_fe150_q149",
+                              "global_id":  149,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  149,
+                              "question":  "NWC204_SU26_FE | Multiple Choice Question 19 (Choose 1 answer)[Diagram showing a router R1 connected to three subnets: \"10.16.10.0/26\", \"10.16.10.192/28\", and \"25 hosts\".]Refer to the exhibit. Considering the addresses already used and having to remain within the 10.16.10.0/24 network range, which subnet address could be assigned to the network containing 25 hosts?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "10.16.10.224/26",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "10.16.10.240/27",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "10.16.10.128/28",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "10.16.10.240/28",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "E",
+                                                  "content":  "10.16.10.160/26",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "F",
+                                                  "content":  "10.16.10.64/27",
+                                                  "is_correct":  true
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "F"
+                                                  ],
+                              "correct_answer":  "F",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv4 Subnetting",
+                              "explanation":  "Mạng chứa 25 hosts cần tối thiểu 5 bit host (2^5 - 2 = 30 \u003e= 25), tức là dùng prefix /27 (bước nhảy 32). Vì 10.16.10.0/26 đã chiếm từ .0 đến .63, dải mạng /27 hợp lệ tiếp theo là 10.16.10.64/27."
+                          },
+                          {
+                              "id":  "nwc_fe150_q150",
+                              "global_id":  150,
+                              "exam_id":  "exam_fe150",
+                              "exam_title":  "Bộ 150 Câu Trọng Tâm FE (Flashcard \u0026 Trắc Nghiệm)",
+                              "exam_code":  "FE_150",
+                              "order_num":  150,
+                              "question":  "What is used in the EUI-64 process to create an IPv6 interface ID on an IPv6 enabled interface?",
+                              "options":  [
+                                              {
+                                                  "label":  "A",
+                                                  "content":  "the MAC address of the IPv6 enabled interface",
+                                                  "is_correct":  true
+                                              },
+                                              {
+                                                  "label":  "B",
+                                                  "content":  "a randomly generated 64-bit hexadecimal address",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "C",
+                                                  "content":  "an IPv6 address that is provided by a DHCPv6 server",
+                                                  "is_correct":  false
+                                              },
+                                              {
+                                                  "label":  "D",
+                                                  "content":  "an IPv4 address that is configured on the interface",
+                                                  "is_correct":  false
+                                              }
+                                          ],
+                              "correct_answers":  [
+                                                      "A"
+                                                  ],
+                              "correct_answer":  "A",
+                              "is_multiple":  false,
+                              "required_count":  1,
+                              "category":  "IPv6 Addressing",
+                              "explanation":  "Quy trình EUI-64 sử dụng địa chỉ MAC 48-bit của chính giao diện đó (chèn thêm FFFE vào giữa và đảo bit thứ 7) để tạo ra phần Interface ID 64-bit cho địa chỉ IPv6."
+                          }
+                      ]
+    },
     {
         "id":  "exam_1",
         "title":  "Đề 1: SU26 - Đề 2 (49 câu)",

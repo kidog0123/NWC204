@@ -1,14 +1,20 @@
 /**
  * NWC204 - Computer Networking (CCNA 1 - ITN) Review App Logic
- * Premium interactive platform with Shuffle, Multi-select support, Bookmarks, and LocalStorage persistence.
+ * Includes:
+ * - 150 Core FE Questions (Flashcard & Multiple-Choice Mode)
+ * - 5 Full Exam Sets + Comprehensive 249-Question Pool
+ * - 3D Flashcard Flip & Quiz Mode Switcher
+ * - Shuffle, Restore, Multi-select, Matrix, Bookmarks, and LocalStorage persistence.
  */
 
 // Global State
 const STORAGE_KEY_ANSWERS = 'nwc204_user_answers_v1';
 const STORAGE_KEY_BOOKMARKS = 'nwc204_bookmarked_ids_v1';
+const STORAGE_KEY_FC_STATUS = 'nwc204_flashcard_status_v1'; // { [qId]: 'good' | 'again' }
 
 let userAnswers = {}; // { [examId]: { [questionId]: { selected: ['A'], isCorrect: true } } }
 let savedQuestionIds = new Set(); // Set of question IDs
+let flashcardStatus = {}; // { [qId]: 'good' | 'again' }
 
 let currentExamId = null;
 let currentExam = null;
@@ -17,6 +23,8 @@ let originalQuestions = []; // Backup of original order
 let currentQuestionIndex = 0;
 let isShuffled = false;
 let currentFilter = 'all'; // 'all' | 'unanswered' | 'wrong' | 'saved'
+let currentMode = 'quiz'; // 'quiz' | 'flashcard'
+let isFlashcardFlipped = false;
 let pendingMultiSelect = new Set(); // Set of selected labels for multi-choice
 
 // Load from LocalStorage
@@ -27,6 +35,9 @@ function loadLocalStorage() {
 
         const storedBm = localStorage.getItem(STORAGE_KEY_BOOKMARKS);
         if (storedBm) savedQuestionIds = new Set(JSON.parse(storedBm));
+
+        const storedFc = localStorage.getItem(STORAGE_KEY_FC_STATUS);
+        if (storedFc) flashcardStatus = JSON.parse(storedFc);
     } catch (e) {
         console.warn('Could not load from localStorage:', e);
     }
@@ -36,6 +47,7 @@ function saveLocalStorage() {
     try {
         localStorage.setItem(STORAGE_KEY_ANSWERS, JSON.stringify(userAnswers));
         localStorage.setItem(STORAGE_KEY_BOOKMARKS, JSON.stringify(Array.from(savedQuestionIds)));
+        localStorage.setItem(STORAGE_KEY_FC_STATUS, JSON.stringify(flashcardStatus));
     } catch (e) {
         console.warn('Could not save to localStorage:', e);
     }
@@ -60,7 +72,6 @@ function showToast(msg, duration = 2500) {
 // Format Cisco CLI commands & keywords in question text
 function formatQuestionContent(text) {
     if (!text) return '';
-    // Wrap common Cisco CLI commands and IP formats in <code>
     return text
         .replace(/\b(ip address [^\s]+ [^\s]+)/gi, '<code>$1</code>')
         .replace(/\b(line console 0|line vty 0 \d|configure terminal|copy running-config startup-config|show ip interface brief|show interfaces|show ip route|no shutdown|service password-encryption|enable secret [^\s]+|enable password [^\s]+|transport input ssh|login|arp -a|ping|traceroute|tracert|nslookup)\b/gi, '<code>$1</code>')
@@ -80,7 +91,7 @@ function renderDashboard() {
     let totalAllCorrect = 0;
     let totalAllWrong = 0;
 
-    NWC204_EXAMS.forEach((exam, idx) => {
+    NWC204_EXAMS.forEach((exam) => {
         const examAns = userAnswers[exam.id] || {};
         const totalQ = exam.questions.length;
         let doneCount = 0;
@@ -96,8 +107,8 @@ function renderDashboard() {
             }
         });
 
-        // Tally for non-comprehensive sets
-        if (exam.id !== 'exam_all') {
+        // Tally for 5 core sets
+        if (exam.id !== 'exam_all' && exam.id !== 'exam_fe150') {
             totalAllDone += doneCount;
             totalAllCorrect += correctCount;
             totalAllWrong += wrongCount;
@@ -116,14 +127,24 @@ function renderDashboard() {
             statusClass = 'status-in-progress';
         }
 
+        const isFeatured = exam.is_featured || exam.id === 'exam_fe150';
         const isComp = exam.id === 'exam_all';
+        
+        let cardClass = 'exam-card';
+        if (isFeatured) cardClass += ' is-featured-150';
+        else if (isComp) cardClass += ' is-comprehensive';
+
         const card = document.createElement('div');
-        card.className = `exam-card ${isComp ? 'is-comprehensive' : ''}`;
+        card.className = cardClass;
+
+        let badgeTag = exam.code;
+        if (isFeatured) badgeTag = '🔥 150 CÂU TRỌNG TÂM FE';
+        else if (isComp) badgeTag = '⚡ TỔNG HỢP 249 CÂU';
 
         card.innerHTML = `
             <div>
                 <div class="exam-card-header">
-                    <span class="exam-badge-tag">${isComp ? '⚡ TỔNG HỢP 249 CÂU' : exam.code}</span>
+                    <span class="exam-badge-tag">${badgeTag}</span>
                     <span class="exam-status-tag ${statusClass}">${statusText}</span>
                 </div>
                 <h3 class="exam-card-title">${exam.title}</h3>
@@ -141,8 +162,11 @@ function renderDashboard() {
                 </div>
             </div>
             <div class="exam-card-actions">
-                <button class="btn-start-exam" data-exam-id="${exam.id}">
-                    <span>${doneCount > 0 ? '▶ Tiếp tục ôn tập' : '🚀 Bắt đầu làm bài'}</span>
+                <button class="btn-start-exam" data-exam-id="${exam.id}" data-mode="quiz">
+                    <span>${doneCount > 0 ? '▶ Tiếp tục ôn' : '🚀 Trắc nghiệm'}</span>
+                </button>
+                <button class="btn-flashcard-card" data-exam-id="${exam.id}" data-mode="flashcard" title="Học lật thẻ Flashcard nhanh">
+                    <span>🗂️ Flashcard</span>
                 </button>
                 ${doneCount > 0 ? `<button class="btn-reset-card" data-exam-id="${exam.id}" title="Làm lại đề này">🔄</button>` : ''}
             </div>
@@ -159,11 +183,12 @@ function renderDashboard() {
     document.getElementById('statTotalWrong').textContent = totalAllWrong;
     document.getElementById('statTotalSaved').textContent = savedQuestionIds.size;
 
-    // Attach Start & Reset Listeners
-    container.querySelectorAll('.btn-start-exam').forEach(btn => {
+    // Attach Listeners
+    container.querySelectorAll('.btn-start-exam, .btn-flashcard-card').forEach(btn => {
         btn.addEventListener('click', () => {
             const eid = btn.dataset.examId;
-            startExam(eid);
+            const mode = btn.dataset.mode || 'quiz';
+            startExam(eid, mode);
         });
     });
 
@@ -184,7 +209,7 @@ function renderDashboard() {
 /* ==========================================================================
    START / SWITCH EXAM VIEW
    ========================================================================== */
-function startExam(examId) {
+function startExam(examId, mode = 'quiz') {
     currentExamId = examId;
     currentExam = NWC204_EXAMS.find(e => e.id === examId);
     if (!currentExam) return;
@@ -194,6 +219,8 @@ function startExam(examId) {
     currentQuestionIndex = 0;
     isShuffled = false;
     currentFilter = 'all';
+    currentMode = mode;
+    isFlashcardFlipped = false;
     pendingMultiSelect.clear();
 
     // Switch Views
@@ -206,13 +233,14 @@ function startExam(examId) {
     document.getElementById('navExamTitle').textContent = currentExam.shortTitle;
     document.getElementById('examCurrentTitle').textContent = currentExam.title;
 
-    // Reset Shuffle UI
+    // Reset Shuffle & Mode UI
     updateShuffleUI();
+    setStudyMode(mode);
 
     // Render Question & Matrix
     updateFilterCounts();
     renderQuestionGrid();
-    renderCurrentQuestion();
+    renderActiveView();
     updateRightSidebarStats();
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -230,12 +258,47 @@ function returnToDashboard() {
 }
 
 /* ==========================================================================
+   STUDY MODE TOGGLE (QUIZ VS FLASHCARD)
+   ========================================================================== */
+function setStudyMode(mode) {
+    currentMode = mode;
+    const btnQuiz = document.getElementById('btnModeQuiz');
+    const btnFc = document.getElementById('btnModeFlashcard');
+    const qCard = document.getElementById('questionCard');
+    const fcCard = document.getElementById('flashcardCard');
+    const filterGroup = document.getElementById('filterPillsGroup');
+
+    if (mode === 'flashcard') {
+        btnQuiz.classList.remove('active');
+        btnFc.classList.add('active');
+        qCard.style.display = 'none';
+        fcCard.style.display = 'block';
+        if (filterGroup) filterGroup.style.display = 'none';
+    } else {
+        btnQuiz.classList.add('active');
+        btnFc.classList.remove('active');
+        qCard.style.display = 'block';
+        fcCard.style.display = 'none';
+        if (filterGroup) filterGroup.style.display = 'flex';
+    }
+
+    renderActiveView();
+}
+
+function renderActiveView() {
+    if (currentMode === 'flashcard') {
+        renderFlashcard();
+    } else {
+        renderCurrentQuestion();
+    }
+}
+
+/* ==========================================================================
    SHUFFLE & RESTORE LOGIC
    ========================================================================== */
 function shuffleQuestions() {
     if (!currentExam) return;
     
-    // Fisher-Yates Shuffle
     for (let i = activeQuestions.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [activeQuestions[i], activeQuestions[j]] = [activeQuestions[j], activeQuestions[i]];
@@ -244,10 +307,11 @@ function shuffleQuestions() {
     isShuffled = true;
     currentQuestionIndex = 0;
     pendingMultiSelect.clear();
+    isFlashcardFlipped = false;
 
     updateShuffleUI();
     renderQuestionGrid();
-    renderCurrentQuestion();
+    renderActiveView();
     showToast(`🔀 Đã tráo đổi ngẫu nhiên ${activeQuestions.length} câu hỏi!`);
 }
 
@@ -258,10 +322,11 @@ function restoreOriginalOrder() {
     isShuffled = false;
     currentQuestionIndex = 0;
     pendingMultiSelect.clear();
+    isFlashcardFlipped = false;
 
     updateShuffleUI();
     renderQuestionGrid();
-    renderCurrentQuestion();
+    renderActiveView();
     showToast(`↺ Đã khôi phục về thứ tự gốc 1 đến ${activeQuestions.length}!`);
 }
 
@@ -335,11 +400,12 @@ function renderQuestionGrid() {
         const isSaved = savedQuestionIds.has(q.id);
         const ans = examAns[q.id];
 
-        // Filter check for visibility in matrix
         let isVisible = true;
-        if (currentFilter === 'unanswered' && ans) isVisible = false;
-        if (currentFilter === 'wrong' && (!ans || ans.isCorrect)) isVisible = false;
-        if (currentFilter === 'saved' && !isSaved) isVisible = false;
+        if (currentMode === 'quiz') {
+            if (currentFilter === 'unanswered' && ans) isVisible = false;
+            if (currentFilter === 'wrong' && (!ans || ans.isCorrect)) isVisible = false;
+            if (currentFilter === 'saved' && !isSaved) isVisible = false;
+        }
 
         const box = document.createElement('div');
         box.className = 'matrix-item';
@@ -355,7 +421,8 @@ function renderQuestionGrid() {
 
         const clickHandler = () => {
             currentQuestionIndex = idx;
-            renderCurrentQuestion();
+            isFlashcardFlipped = false;
+            renderActiveView();
             highlightMatrixCurrent();
             closeMobileMatrix();
         };
@@ -370,7 +437,6 @@ function renderQuestionGrid() {
         }
     });
 
-    // Update progress text in sidebar
     let answeredCount = Object.keys(examAns).length;
     document.getElementById('sidebarProgressText').textContent = `${answeredCount} / ${activeQuestions.length}`;
 }
@@ -388,7 +454,7 @@ function highlightMatrixCurrent() {
 }
 
 /* ==========================================================================
-   RENDER CURRENT QUESTION
+   RENDER QUIZ QUESTION
    ========================================================================== */
 function renderCurrentQuestion() {
     if (!currentExam || activeQuestions.length === 0) return;
@@ -462,7 +528,6 @@ function renderCurrentQuestion() {
             <div class="option-text-body">${formatQuestionContent(opt.content)}</div>
         `;
 
-        // If question was already answered, reveal state & lock
         if (existingAns) {
             row.classList.add('locked');
             const wasSelected = existingAns.selected.includes(opt.label);
@@ -474,7 +539,6 @@ function renderCurrentQuestion() {
                 row.classList.add('is-wrong');
             }
         } else {
-            // Interactive click handler
             row.addEventListener('click', () => {
                 handleOptionClick(q, opt.label, row);
             });
@@ -512,17 +576,95 @@ function renderCurrentQuestion() {
 }
 
 /* ==========================================================================
-   OPTION SELECTION & ANSWER PROCESSING
+   RENDER FLASHCARD MODE
+   ========================================================================== */
+function renderFlashcard() {
+    if (!currentExam || activeQuestions.length === 0) return;
+    const q = activeQuestions[currentQuestionIndex];
+    if (!q) return;
+
+    highlightMatrixCurrent();
+    isFlashcardFlipped = false;
+    document.getElementById('flashcardInner').classList.remove('is-flipped');
+
+    // Front details
+    document.getElementById('fcNumberPill').textContent = `THẺ ${currentQuestionIndex + 1} / ${activeQuestions.length}`;
+    document.getElementById('fcCategoryPill').textContent = q.category || 'CCNA ITN';
+    document.getElementById('examProgressCount').textContent = `Thẻ ${currentQuestionIndex + 1} / ${activeQuestions.length}`;
+    document.getElementById('fcQuestionText').innerHTML = formatQuestionContent(q.question);
+
+    // Options preview on front
+    const previewContainer = document.getElementById('fcOptionsPreview');
+    previewContainer.innerHTML = '';
+    q.options.forEach(opt => {
+        const row = document.createElement('div');
+        row.className = 'fc-preview-row';
+        row.innerHTML = `
+            <div class="fc-preview-badge">${opt.label}</div>
+            <div>${formatQuestionContent(opt.content)}</div>
+        `;
+        previewContainer.appendChild(row);
+    });
+
+    // Back details
+    const correctLetters = Array.from(new Set(q.correct_answers || [q.correct_answer])).join(', ');
+    document.getElementById('fcAnswerBadge').textContent = `🎯 ĐÁP ÁN ĐÚNG: ${correctLetters}`;
+    document.getElementById('fcExplanationText').innerHTML = q.explanation || 'Không có giải thích chi tiết.';
+
+    // Nav buttons
+    document.getElementById('btnFcPrev').disabled = currentQuestionIndex === 0;
+    document.getElementById('btnFcNext').disabled = currentQuestionIndex === activeQuestions.length - 1;
+
+    updateRightSidebarStats();
+}
+
+function flipFlashcard() {
+    isFlashcardFlipped = !isFlashcardFlipped;
+    const inner = document.getElementById('flashcardInner');
+    if (isFlashcardFlipped) {
+        inner.classList.add('is-flipped');
+    } else {
+        inner.classList.remove('is-flipped');
+    }
+}
+
+function rateFlashcard(status) {
+    if (!currentExam) return;
+    const q = activeQuestions[currentQuestionIndex];
+    if (!q) return;
+
+    flashcardStatus[q.id] = status;
+
+    if (status === 'again') {
+        savedQuestionIds.add(q.id);
+        showToast('❌ Đã lưu thẻ vào danh sách ôn lại!');
+    } else {
+        showToast('✅ Đã nắm vững thẻ này!');
+    }
+    saveLocalStorage();
+
+    // Advance to next card if not at end
+    if (currentQuestionIndex < activeQuestions.length - 1) {
+        currentQuestionIndex++;
+        renderFlashcard();
+    } else {
+        flipFlashcard();
+    }
+    renderQuestionGrid();
+    updateFilterCounts();
+    updateRightSidebarStats();
+}
+
+/* ==========================================================================
+   OPTION SELECTION & ANSWER PROCESSING (QUIZ)
    ========================================================================== */
 function handleOptionClick(q, label, rowElement) {
     const examAns = userAnswers[currentExam.id] || {};
-    if (examAns[q.id]) return; // Already locked
+    if (examAns[q.id]) return;
 
     if (!q.is_multiple) {
-        // Single Choice: Check Immediately!
         processUserAnswer(q, [label]);
     } else {
-        // Multi-choice: Toggle Selection
         if (pendingMultiSelect.has(label)) {
             pendingMultiSelect.delete(label);
             rowElement.classList.remove('is-selected-pending');
@@ -547,11 +689,7 @@ function updateMultiSubmitButton(q) {
     document.getElementById('selectedCountText').textContent = selectedCount;
     document.getElementById('requiredCountText').textContent = required;
 
-    if (selectedCount === required) {
-        btn.disabled = false;
-    } else {
-        btn.disabled = true;
-    }
+    btn.disabled = (selectedCount !== required);
 }
 
 function processUserAnswer(q, selectedLabels) {
@@ -575,7 +713,6 @@ function processUserAnswer(q, selectedLabels) {
         }
     }
 
-    // Save answer
     userAnswers[currentExam.id][q.id] = {
         selected: selectedLabels,
         isCorrect: isAllCorrect,
@@ -583,7 +720,6 @@ function processUserAnswer(q, selectedLabels) {
     };
     saveLocalStorage();
 
-    // Re-render question & matrix
     renderCurrentQuestion();
     renderQuestionGrid();
     updateFilterCounts();
@@ -650,11 +786,36 @@ function initEvents() {
     document.getElementById('brandHome').addEventListener('click', returnToDashboard);
     document.getElementById('btnBackToHome').addEventListener('click', returnToDashboard);
 
+    // Mode Toggle
+    document.getElementById('btnModeQuiz').addEventListener('click', () => setStudyMode('quiz'));
+    document.getElementById('btnModeFlashcard').addEventListener('click', () => setStudyMode('flashcard'));
+
+    // Flashcard Flip & Actions
+    document.getElementById('btnFlipCardFront').addEventListener('click', flipFlashcard);
+    document.getElementById('btnFlipCardBack').addEventListener('click', flipFlashcard);
+    document.getElementById('btnFcRateAgain').addEventListener('click', () => rateFlashcard('again'));
+    document.getElementById('btnFcRateGood').addEventListener('click', () => rateFlashcard('good'));
+
+    // Flashcard Prev/Next
+    document.getElementById('btnFcPrev').addEventListener('click', () => {
+        if (currentQuestionIndex > 0) {
+            currentQuestionIndex--;
+            renderFlashcard();
+        }
+    });
+    document.getElementById('btnFcNext').addEventListener('click', () => {
+        if (currentQuestionIndex < activeQuestions.length - 1) {
+            currentQuestionIndex++;
+            renderFlashcard();
+        }
+    });
+
     // Reset All Data
     document.getElementById('btnResetAll').addEventListener('click', () => {
         if (confirm('Bạn có chắc chắn muốn xóa toàn bộ lịch sử làm bài và các câu đã lưu không?')) {
             userAnswers = {};
             savedQuestionIds.clear();
+            flashcardStatus = {};
             saveLocalStorage();
             if (currentExamId) {
                 returnToDashboard();
@@ -673,7 +834,7 @@ function initEvents() {
             saveLocalStorage();
             currentQuestionIndex = 0;
             renderQuestionGrid();
-            renderCurrentQuestion();
+            renderActiveView();
             updateFilterCounts();
             showToast('Đã làm mới đề thi!');
         }
@@ -716,7 +877,7 @@ function initEvents() {
         processUserAnswer(q, Array.from(pendingMultiSelect).sort());
     });
 
-    // Prev / Next Navigation
+    // Prev / Next Navigation (Quiz)
     document.getElementById('btnPrevQ').addEventListener('click', () => {
         if (currentQuestionIndex > 0) {
             currentQuestionIndex--;
@@ -738,7 +899,6 @@ function initEvents() {
             pill.classList.add('active');
             currentFilter = pill.dataset.filter;
 
-            // Find first matching question in this filter
             const filtered = getFilteredQuestions();
             if (filtered.length > 0) {
                 const targetId = filtered[0].id;
@@ -758,10 +918,32 @@ function initEvents() {
 
     // Keyboard Shortcuts
     window.addEventListener('keydown', (e) => {
-        // If not in practice view, ignore
         if (!currentExam || document.getElementById('practiceView').style.display === 'none') return;
 
-        // Arrow keys for Next / Prev
+        // Flashcard Mode Shortcuts
+        if (currentMode === 'flashcard') {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                flipFlashcard();
+            } else if (e.key === 'ArrowLeft') {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    renderFlashcard();
+                }
+            } else if (e.key === 'ArrowRight') {
+                if (currentQuestionIndex < activeQuestions.length - 1) {
+                    currentQuestionIndex++;
+                    renderFlashcard();
+                }
+            } else if (e.key === '1') {
+                rateFlashcard('again');
+            } else if (e.key === '2') {
+                rateFlashcard('good');
+            }
+            return;
+        }
+
+        // Quiz Mode Shortcuts
         if (e.key === 'ArrowLeft') {
             if (currentQuestionIndex > 0) {
                 currentQuestionIndex--;
@@ -774,14 +956,13 @@ function initEvents() {
             }
         }
 
-        // Keys 1, 2, 3, 4, 5, 6 or A, B, C, D, E, F
         const q = activeQuestions[currentQuestionIndex];
         if (!q) return;
 
         let letter = null;
         if (e.key >= '1' && e.key <= '6') {
             const num = parseInt(e.key);
-            letter = String.fromCharCode(64 + num); // 1->A, 2->B...
+            letter = String.fromCharCode(64 + num);
         } else if (['a', 'b', 'c', 'd', 'e', 'f'].includes(e.key.toLowerCase())) {
             letter = e.key.toUpperCase();
         }
@@ -791,7 +972,6 @@ function initEvents() {
             if (optRow) optRow.click();
         }
 
-        // Enter to confirm multi-choice
         if (e.key === 'Enter' && q.is_multiple) {
             const btn = document.getElementById('btnConfirmMulti');
             if (btn && !btn.disabled) btn.click();
